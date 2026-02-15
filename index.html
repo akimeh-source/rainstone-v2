@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainstone Money | Independent Mortgage &amp; Commercial Finance Brokers in the UK</title>
+    <title>Rainstone Money | Residential &amp; Commercial Finance Made Easy</title>
     <meta name="description" content="Rainstone Money — award-winning UK finance brokers with over 100 years of combined banking experience. Residential mortgages, commercial finance, bridging loans, business loans and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Preload commercial video -->
+    <link rel="preload" href="videos/commercial-hero.mp4" as="video" type="video/mp4">
 </head>
 <body data-mode="personal">
 
@@ -54,18 +56,19 @@
 
             <nav class="main-nav" id="main-nav" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <!-- Personal nav items -->
+                    <!-- Personal nav — Mortgages -->
                     <li class="nav-item has-dropdown nav-personal">
-                        <a href="#services">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="#services">Mortgages <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="#services">Residential Mortgages</a></li>
+                            <li><a href="#services">Flexible Mortgages</a></li>
                             <li><a href="#services">Buy-to-Let Mortgages</a></li>
                             <li><a href="#services">Remortgaging</a></li>
-                            <li><a href="#services">First-Time Buyers</a></li>
-                            <li><a href="#services">Foreign Nationals</a></li>
+                            <li><a href="#services">Lifetime Mortgages</a></li>
+                            <li><a href="#services">Offset Mortgages</a></li>
+                            <li><a href="#services">Development Finance</a></li>
                         </ul>
                     </li>
-                    <!-- Commercial nav items -->
+                    <!-- Commercial nav — Our Services -->
                     <li class="nav-item has-dropdown nav-commercial">
                         <a href="#services">Our Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
@@ -78,16 +81,18 @@
                     </li>
 
                     <li class="nav-item has-dropdown">
-                        <a href="#services">Insurance <i class="fas fa-chevron-down"></i></a>
+                        <a href="#">Insurance <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="#services">Building Insurance</a></li>
-                            <li><a href="#services">Content Insurance</a></li>
-                            <li><a href="#services">Landlord Insurance</a></li>
-                            <li><a href="#planning">Financial Health Check</a></li>
-                            <li><a href="#planning">Financial Planning</a></li>
+                            <li><a href="#">Building Insurance</a></li>
+                            <li><a href="#">Content Insurance</a></li>
+                            <li><a href="#">Landlord Insurance</a></li>
+                            <li class="nav-personal-item"><a href="#">Renters Insurance</a></li>
+                            <li><a href="#">Financial Health Check</a></li>
+                            <li><a href="#">Financial Planning</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#">Rainstone Network</a></li>
+                    <li class="nav-item nav-personal"><a href="#">Foreign Nationals</a></li>
+                    <li class="nav-item"><a href="#">Network</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-cta">Book Consultation</a></li>
                     <li class="nav-item has-dropdown">
                         <a href="#about">About Us <i class="fas fa-chevron-down"></i></a>
@@ -110,11 +115,9 @@
         </div>
     </header>
 
-    <!-- ============================================================
-         PERSONAL / RESIDENTIAL MODE
-         ============================================================ -->
-
-    <!-- HERO — Personal -->
+    <!-- ================================================================
+         PERSONAL HERO
+         ================================================================ -->
     <section class="hero tab-personal" id="hero">
         <div class="hero-bg">
             <div class="hero-overlay"></div>
@@ -122,9 +125,12 @@
         </div>
         <div class="container hero-content">
             <div class="hero-text" data-animate="fade-up">
-                <h1>Independent Mortgage &amp;<br>Commercial Finance<br>Brokers in the UK</h1>
-                <p class="hero-subtitle">Helping homeowners, first-time buyers, and landlords across the UK secure the best mortgage deals — <strong>Personal Finance MADE EASY</strong></p>
-                <a href="#contact" class="btn btn-primary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
+                <h1>Residential &amp; Commercial<br>Finance <span class="text-accent">Made Easy</span></h1>
+                <p class="hero-subtitle">Always Getting You The Best Rate. Founded in 2015 by ex-professional bankers with over 100 years of combined experience.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Free Consultation <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="btn btn-outline-light">Join as an Introducer <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="hero-logos">
@@ -145,25 +151,28 @@
                     <div class="badge-icon"><i class="fas fa-shield-halved"></i></div>
                     <span>FCA Authorised</span>
                 </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="500">
-                    <div class="badge-icon"><i class="fas fa-medal"></i></div>
-                    <span>SME News Winner</span>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- HERO — Commercial -->
-    <section class="hero tab-commercial" id="hero-commercial">
+    <!-- ================================================================
+         COMMERCIAL HERO — with cinematic video background
+         ================================================================ -->
+    <section class="hero hero-commercial-bg tab-commercial" id="hero-commercial">
         <div class="hero-bg">
-            <div class="hero-overlay"></div>
-            <div class="hero-image hero-image-commercial"></div>
+            <div class="hero-overlay hero-overlay-commercial"></div>
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="">
+                <source src="videos/commercial-hero.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="container hero-content">
             <div class="hero-text" data-animate="fade-up">
-                <h1>Commercial Finance<br>MADE EASY</h1>
-                <p class="hero-subtitle">Built for Complexity, Powered by Expertise — delivering tailored funding solutions for businesses, developers, and <strong>high-net-worth individuals</strong></p>
-                <a href="#contact" class="btn btn-primary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
+                <h1>Commercial Finance<br><span class="text-accent">MADE EASY</span></h1>
+                <p class="hero-subtitle">Built for Complexity, Powered by Expertise. Delivering tailored funding solutions for businesses, developers, and high-net-worth individuals.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-outline-light">Speak to an Expert <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="hero-logos">
@@ -181,18 +190,16 @@
                     <span>Best Brokerage Firm 2024</span>
                 </div>
                 <div class="logo-badge" data-animate="fade-up" data-delay="400">
-                    <div class="badge-icon"><i class="fas fa-shield-halved"></i></div>
-                    <span>FCA Authorised</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="500">
                     <div class="badge-icon"><i class="fas fa-medal"></i></div>
-                    <span>SME News Winner</span>
+                    <span>Most Innovative 2023</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PERSONAL FINANCE SOLUTIONS ========== -->
+    <!-- ================================================================
+         PERSONAL — ABOUT + SERVICES
+         ================================================================ -->
     <section class="solutions-section tab-personal" id="personal-finance">
         <div class="container">
             <div class="section-label" data-animate="fade-up">WHAT WE DO</div>
@@ -213,6 +220,31 @@
                     <div class="image-placeholder personal-img">
                         <i class="fas fa-home"></i>
                     </div>
+                </div>
+            </div>
+
+            <!-- Personal service cards -->
+            <div class="service-cards" data-animate="fade-up">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-house-chimney"></i></div>
+                    <h4>Buy to Let</h4>
+                    <p class="service-tag">Best deals and expert advice</p>
+                    <p>If you're buying a property with the intention of renting it out, a buy-to-let mortgage might be the ideal fit. Our skilled consultants possess the in-house know-how to comprehend the current challenges faced by landlords.</p>
+                    <a href="#contact" class="btn btn-text">Get the best rate <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-key"></i></div>
+                    <h4>Remortgaging</h4>
+                    <p class="service-tag">Switch and save</p>
+                    <p>Exploring different mortgage deals is crucial to finding one that suits your goals and financial capabilities. We help you navigate the remortgaging process to secure better terms and lower rates.</p>
+                    <a href="#contact" class="btn btn-text">Speak to an expert <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user-check"></i></div>
+                    <h4>First-Time Buyers</h4>
+                    <p class="service-tag">Your first step onto the ladder</p>
+                    <p>Choosing the right mortgage for your specific circumstances is a pivotal decision. With flexible mortgages, you have options like changing interest rates, customising repayment plans, and making extra payments when needed.</p>
+                    <a href="#contact" class="btn btn-text">Book a consultation <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -245,7 +277,9 @@
         </div>
     </section>
 
-    <!-- ========== COMMERCIAL FINANCE SOLUTIONS ========== -->
+    <!-- ================================================================
+         COMMERCIAL — ABOUT + SERVICES
+         ================================================================ -->
     <section class="solutions-section solutions-alt tab-commercial" id="services">
         <div class="container">
             <div class="section-label" data-animate="fade-up">WHAT WE DO</div>
@@ -255,6 +289,7 @@
                 <div class="solutions-content" data-animate="fade-right">
                     <h3>Supporting Businesses to Grow</h3>
                     <p>Our Commercial Finance division works with business owners, property developers, and investors to arrange funding solutions tailored to their needs. From bridging loans to development finance and asset-backed lending, we provide flexible financing strategies designed to support growth, cash flow, and long-term success.</p>
+                    <p>Commercial Finance encompasses a wide range of solutions, including loans, lines of credit, equipment financing, factoring, and other specialised financial products tailored to the unique requirements of businesses.</p>
                     <div class="stat-block">
                         <span class="stat-number">1.6x</span>
                         <span class="stat-text">Our brokers deliver above the rate<br>of standard market returns</span>
@@ -266,6 +301,40 @@
                         <i class="fas fa-building"></i>
                     </div>
                 </div>
+            </div>
+
+            <!-- Commercial service cards -->
+            <div class="service-cards" data-animate="fade-up">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-landmark"></i></div>
+                    <h4>Commercial Finance</h4>
+                    <p class="service-tag">Let your business thrive</p>
+                    <p>Rainstone Money is a trusted commercial finance broker for flexible funding solutions. Commercial mortgage rates play a crucial role in determining the cost of borrowing for businesses. We help you make informed decisions about your financing needs.</p>
+                    <a href="#contact" class="btn btn-text">Speak to an expert <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bridge"></i></div>
+                    <h4>Bridging Loan</h4>
+                    <p class="service-tag">Quick access to funds when needed</p>
+                    <p>Bridging loans offer a means to secure a substantial sum for a brief duration. They're primarily used to 'bridge the gap' in property transactions, such as facilitating the purchase of a new property before the sale of an existing one is finalised.</p>
+                    <a href="#contact" class="btn btn-text">Free broker advice <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h4>Business Loans</h4>
+                    <p class="service-tag">Funding to fuel your growth</p>
+                    <p>Whether it's a term loan, line of credit, equipment financing, or factoring — our commercial finance options are structured to provide resilience, offering adaptable terms and support mechanisms to help your business navigate changing economic landscapes.</p>
+                    <a href="#contact" class="btn btn-text">Speak to an expert <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Commercial key features -->
+            <div class="features-strip" data-animate="fade-up">
+                <div class="feature-pill"><i class="fas fa-sliders"></i> Customisation</div>
+                <div class="feature-pill"><i class="fas fa-coins"></i> Cash Flow Management</div>
+                <div class="feature-pill"><i class="fas fa-receipt"></i> Tax Advantages</div>
+                <div class="feature-pill"><i class="fas fa-compass"></i> Expert Guidance</div>
+                <div class="feature-pill"><i class="fas fa-arrows-left-right"></i> Flexibility</div>
             </div>
 
             <div class="values-row" data-animate="fade-up">
@@ -297,7 +366,9 @@
         </div>
     </section>
 
-    <!-- ========== INTERACTIVE PLANNING — LIGHT (Personal) ========== -->
+    <!-- ================================================================
+         PERSONAL — Interactive Planning (Light)
+         ================================================================ -->
     <section class="planning-section tab-personal" id="planning">
         <div class="container planning-grid">
             <div class="planning-content" data-animate="fade-right">
@@ -331,7 +402,9 @@
         </div>
     </section>
 
-    <!-- ========== INTERACTIVE PLANNING — DARK (Commercial) ========== -->
+    <!-- ================================================================
+         COMMERCIAL — Interactive Planning (Dark)
+         ================================================================ -->
     <section class="planning-section planning-dark tab-commercial" id="planning-commercial">
         <div class="container planning-grid planning-grid-reverse">
             <div class="planning-image" data-animate="fade-right">
@@ -347,11 +420,87 @@
         </div>
     </section>
 
-    <!-- ============================================================
-         SHARED SECTIONS (visible in both modes)
-         ============================================================ -->
+    <!-- ================================================================
+         PERSONAL — Mortgage Calculator CTA
+         ================================================================ -->
+    <section class="calculator-section tab-personal" id="calculator">
+        <div class="container calculator-grid">
+            <div class="calculator-content" data-animate="fade-right">
+                <div class="section-label">TOOLS</div>
+                <h2>Try Our Mortgage <span class="text-accent">Calculator</span></h2>
+                <p>Work out how much you could borrow and how much deposit you need for a mortgage. Our free calculator gives you an instant estimate based on your income and circumstances.</p>
+                <a href="#" class="btn btn-primary">Calculate Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="calculator-visual" data-animate="fade-left">
+                <div class="calc-card">
+                    <div class="calc-row">
+                        <span>Property value</span>
+                        <strong>&pound;350,000</strong>
+                    </div>
+                    <div class="calc-row">
+                        <span>Deposit (15%)</span>
+                        <strong>&pound;52,500</strong>
+                    </div>
+                    <div class="calc-row">
+                        <span>Loan amount</span>
+                        <strong>&pound;297,500</strong>
+                    </div>
+                    <div class="calc-divider"></div>
+                    <div class="calc-row calc-highlight">
+                        <span>Est. monthly payment</span>
+                        <strong>&pound;1,420</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- ========== AWARDS & RECOGNITION ========== -->
+    <!-- ================================================================
+         COMMERCIAL — How It Works (6-Step Process)
+         ================================================================ -->
+    <section class="process-section tab-commercial" id="process">
+        <div class="container">
+            <div class="section-label" data-animate="fade-up">HOW IT WORKS</div>
+            <h2 class="section-title" data-animate="fade-up">Our 6-Step <span class="text-accent">Process</span></h2>
+            <p class="section-subtitle" data-animate="fade-up">From initial enquiry to completion, our streamlined process makes commercial finance straightforward.</p>
+            <div class="process-steps" data-animate="fade-up">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h4>Initial Enquiry</h4>
+                    <p>Tell us about your requirements and we'll assess your needs.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h4>Documents</h4>
+                    <p>We gather the required documentation to support your application.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h4>Decision in Principle</h4>
+                    <p>We secure a DIP from lenders based on your financial profile.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h4>Application</h4>
+                    <p>Full application submitted with all supporting information.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h4>Offer</h4>
+                    <p>Formal mortgage offer issued by the lender for your review.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">06</div>
+                    <h4>Completion</h4>
+                    <p>Funds released, deal completed. We're here beyond completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         SHARED — Awards
+         ================================================================ -->
     <section class="awards-section" id="awards">
         <div class="container">
             <div class="section-label" data-animate="fade-up">RECOGNITION</div>
@@ -397,7 +546,9 @@
         </div>
     </section>
 
-    <!-- ========== DIRECTOR QUOTE / ABOUT ========== -->
+    <!-- ================================================================
+         SHARED — About / Director Quote
+         ================================================================ -->
     <section class="quote-section" id="about">
         <div class="container quote-grid">
             <div class="quote-image" data-animate="fade-right">
@@ -408,9 +559,9 @@
             <div class="quote-content" data-animate="fade-left">
                 <div class="section-label">ABOUT US</div>
                 <h2>Built by Bankers,<br>Driven by <span class="text-accent">Relationships</span></h2>
-                <p>Rainstone Money has been built up by ex-professional bankers with a combined experience of over 100 years within the commercial and property industry. Since 2015, we have taken great pride in building long lasting relationships with our clients and supporting them with all of their financial needs.</p>
+                <p>Founded in 2015, Rainstone Money has been built up by ex-professional bankers with a combined experience of over 100 years within the commercial finance and property industry. We have taken great pride in building long lasting relationships with our clients and supporting them with all of their financial needs. We are experts in commercial finance, mortgages, development funding, bridging finance, business loans, asset finance, invoice finance and insurance.</p>
                 <blockquote>
-                    <p>&ldquo;We launched Rainstone Money Commercial Finance as a distinct arm of Rainstone Money Group to deliver a more focused and specialist service for complex commercial finance needs and high-net-worth individuals, enabling tailored, innovative solutions with a premium, hands-on approach.&rdquo;</p>
+                    <p>&ldquo;We launched Rainstone Money Commercial Finance as a distinct arm of Rainstone Money Group to deliver a more focused and specialist service for complex commercial finance needs and high-net-worth individuals. This move enables us to provide tailored, innovative solutions with a premium, hands-on approach that reflects the calibre of our clients and the sophistication of their portfolios.&rdquo;</p>
                     <footer>
                         <strong>Rahul Modasia</strong>
                         <span>Director of Commercial, Bridging, &amp; Development Finance</span>
@@ -420,11 +571,13 @@
         </div>
     </section>
 
-    <!-- ========== TESTIMONIALS ========== -->
+    <!-- ================================================================
+         SHARED — Testimonials
+         ================================================================ -->
     <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-label" data-animate="fade-up">TESTIMONIALS</div>
-            <h2 class="section-title" data-animate="fade-up">What Our Clients <span class="text-accent">Say</span></h2>
+            <h2 class="section-title" data-animate="fade-up">We Let Our Customers <span class="text-accent">Speak For Us</span></h2>
             <div class="google-rating" data-animate="fade-up">
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
@@ -437,7 +590,7 @@
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p>&ldquo;Moe was fantastic, very knowledgeable about mortgages. I had a complex case and he presented various options and solutions. Highly recommend Rainstone Money to anyone looking for expert mortgage advice.&rdquo;</p>
+                    <p>&ldquo;Moe was fantastic, you can tell he is very knowledgeable about mortgages. I had quite a complex case, he was able to advise me and present various different options. I would highly recommend him and Rainstone.&rdquo;</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">FJ</div>
                         <div>
@@ -450,7 +603,7 @@
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p>&ldquo;The team were absolutely amazing. Communication and transparency were great throughout the entire process. They worked tirelessly to ensure I received the best deal possible. Could not recommend enough.&rdquo;</p>
+                    <p>&ldquo;The team at Rainstone were absolutely amazing. The communication and transparency were great from start to finish and they worked tirelessly to get the best deal to suit my requirements. Thank you to Rahul and Foyaz for your amazing support I will be returning!&rdquo;</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">AK</div>
                         <div>
@@ -463,7 +616,7 @@
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p>&ldquo;Excellent performance. Efficient, constant communication, professional and thorough experience from start to finish. I would highly recommend Rainstone Money for any mortgage or finance needs.&rdquo;</p>
+                    <p>&ldquo;Excellent performance from the guys at Rainstone. I came to them for financial advice regarding my business, they were very efficient we were in constant communication. I found the whole experience professional and thorough. Thanks to Hassan and Lauren for all of their efforts!&rdquo;</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">DL</div>
                         <div>
@@ -476,7 +629,9 @@
         </div>
     </section>
 
-    <!-- ========== OUR LATEST INSIGHTS ========== -->
+    <!-- ================================================================
+         SHARED — Insights
+         ================================================================ -->
     <section class="insights-section" id="insights">
         <div class="container">
             <div class="section-label" data-animate="fade-up">KNOWLEDGE HUB</div>
@@ -501,7 +656,7 @@
                     </div>
                     <div class="insight-body">
                         <h4>Healthcare Private Equity Market 2024: Year in Review and Outlook</h4>
-                        <p>A comprehensive overview of the healthcare private equity landscape and what it means for investors and businesses.</p>
+                        <p>A comprehensive overview of the healthcare private equity landscape and what it means for investors.</p>
                         <a href="#" class="btn btn-text">Read Insight <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -511,8 +666,8 @@
                         <span class="insight-tag">Property</span>
                     </div>
                     <div class="insight-body">
-                        <h4>UK Property Market Trends: What Commercial Investors Need to Know</h4>
-                        <p>Key insights into the UK property market for commercial investors looking to make informed decisions in 2024.</p>
+                        <h4>UK Property Market Trends: What Investors Need to Know</h4>
+                        <p>Key insights into the UK property market for investors looking to make informed decisions.</p>
                         <a href="#" class="btn btn-text">Read Insight <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -520,7 +675,9 @@
         </div>
     </section>
 
-    <!-- ========== FINANCIAL PLANNING FAQ'S ========== -->
+    <!-- ================================================================
+         SHARED — FAQ
+         ================================================================ -->
     <section class="faq-section" id="faq">
         <div class="container">
             <div class="section-label" data-animate="fade-up">COMMON QUESTIONS</div>
@@ -567,7 +724,9 @@
         </div>
     </section>
 
-    <!-- ========== CONTACT / LET'S CONNECT ========== -->
+    <!-- ================================================================
+         SHARED — Contact
+         ================================================================ -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-label" data-animate="fade-up">GET IN TOUCH</div>
@@ -665,16 +824,18 @@
                         <h5>Personal</h5>
                         <ul>
                             <li><a href="#">Residential Mortgages</a></li>
-                            <li><a href="#">Buy-to-Let</a></li>
+                            <li><a href="#">Buy-to-Let Mortgages</a></li>
                             <li><a href="#">Remortgaging</a></li>
-                            <li><a href="#">First-Time Buyers</a></li>
                             <li><a href="#">Lifetime Mortgages</a></li>
+                            <li><a href="#">First-Time Buyers</a></li>
+                            <li><a href="#">Foreign Nationals</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h5>Commercial</h5>
                         <ul>
                             <li><a href="#services">Commercial Finance</a></li>
+                            <li><a href="#services">Commercial Mortgages</a></li>
                             <li><a href="#services">Bridging Loans</a></li>
                             <li><a href="#services">Business Loans</a></li>
                             <li><a href="#services">Development Finance</a></li>
@@ -687,6 +848,7 @@
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#insights">Case Studies</a></li>
                             <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Financial Health Check</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#contact">Contact Us</a></li>
                         </ul>
@@ -695,7 +857,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="footer-regulatory">Rainstone Money is a trading name of Rainstone Financial Services Limited which is authorised and regulated by the Financial Conduct Authority, Registration Number: 743879. Rainstone Financial Services Limited is registered in England and Wales, Company Registration Number: 09650440. Registered Office: The Whitechapel Centre, 85 Myrdle Street, London E1 1HL. Rainstone Money is a credit broker, not a lender. Commissions vary depending on lender, product, or other permissible factors. The nature of any commission model will be confirmed to you before you proceed.</p>
+                <p class="footer-disclaimer tab-personal">Your home may be repossessed if you do not keep up repayments on a mortgage or other debt secured on it.</p>
+                <p class="footer-regulatory">Rainstone Money is a trading name of Rainstone Financial Services Limited which is authorised and regulated by the Financial Conduct Authority, Registration Number: 743879. Rainstone Financial Services Limited is registered in England and Wales, Company Registration Number: 09650440. Registered Office: The Whitechapel Centre, 85 Myrdle Street, London E1 1HL. We are a credit broker, not a lender. We may receive commissions that will vary depending on the lender, product, or other permissible factors. The nature of any commission model will be confirmed to you before you proceed.</p>
                 <div class="footer-copy">
                     <p>&copy; 2024 | All Rights Reserved | Rainstone Financial Services Ltd</p>
                 </div>

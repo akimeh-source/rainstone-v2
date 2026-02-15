@@ -124,6 +124,7 @@ body[data-mode="commercial"] .tab-commercial{display:block}
 .nav-commercial{display:none !important}
 body[data-mode="commercial"] .nav-personal{display:none !important}
 body[data-mode="commercial"] .nav-commercial{display:flex !important}
+body[data-mode="commercial"] .nav-personal-item{display:none}
 
 /* ---------- HEADER ---------- */
 .site-header{
@@ -240,6 +241,27 @@ body[data-mode="commercial"] .nav-commercial{display:flex !important}
     margin-bottom:36px;line-height:1.7;
 }
 .hero-subtitle strong{color:#C9A84C}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-outline-light{
+    background:transparent;color:#fff;padding:14px 32px;
+    border:2px solid rgba(255,255,255,.4);
+}
+.btn-outline-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* Commercial hero video */
+.hero-video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:0;
+}
+.hero-overlay-commercial{
+    background:linear-gradient(135deg,rgba(21,46,34,.92) 0%,rgba(27,60,45,.7) 50%,rgba(27,60,45,.5) 100%);
+    z-index:1;
+}
+
+/* Reduced motion: pause video */
+@media(prefers-reduced-motion:reduce){
+    .hero-video{display:none}
+}
 
 /* Hero logos strip */
 .hero-logos{
@@ -333,6 +355,110 @@ body[data-mode="commercial"] .nav-commercial{display:flex !important}
     font-weight:600;margin-bottom:10px;
 }
 .value-card p{font-size:.88rem;color:#4A4A4A;line-height:1.65}
+
+/* ---------- SERVICE CARDS ---------- */
+.service-cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    margin-top:48px;text-align:left;
+}
+.service-card{
+    padding:32px 28px;border-radius:16px;
+    background:#fff;border:1px solid rgba(27,60,45,.06);
+    box-shadow:0 4px 20px rgba(0,0,0,.04);
+    transition:transform .3s,box-shadow .3s;
+}
+.solutions-alt .service-card{background:#FAFAF7}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.service-icon{
+    width:48px;height:48px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;font-size:1.1rem;
+    background:linear-gradient(135deg,#1B3C2D,#2A5A3F);color:#C9A84C;
+}
+.service-card h4{
+    font-family:'Playfair Display',serif;font-size:1.15rem;
+    font-weight:600;margin-bottom:4px;
+}
+.service-tag{
+    font-size:.78rem;font-weight:600;color:#C9A84C;
+    text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;
+}
+.service-card>p:last-of-type{font-size:.88rem;color:#4A4A4A;line-height:1.65;margin-bottom:16px}
+
+/* ---------- FEATURES STRIP ---------- */
+.features-strip{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:12px;
+    margin-top:40px;
+}
+.feature-pill{
+    display:flex;align-items:center;gap:8px;
+    padding:10px 20px;border-radius:50px;
+    background:#1B3C2D;color:#C9A84C;
+    font-size:.82rem;font-weight:600;
+}
+.feature-pill i{font-size:.75rem}
+
+/* ---------- CALCULATOR SECTION ---------- */
+.calculator-section{
+    padding:80px 0;
+    background:linear-gradient(135deg,#1B3C2D 0%,#2A5A3F 100%);
+    color:#fff;
+}
+.calculator-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;
+    align-items:center;
+}
+.calculator-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.8rem,3.5vw,2.6rem);
+    font-weight:700;margin-bottom:20px;line-height:1.2;color:#fff;
+}
+.calculator-content p{color:rgba(255,255,255,.75);margin-bottom:28px;line-height:1.75}
+.calc-card{
+    background:rgba(255,255,255,.08);backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:16px;padding:32px;
+}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.calc-row span{color:rgba(255,255,255,.6);font-size:.9rem}
+.calc-row strong{color:#fff;font-size:1.05rem}
+.calc-divider{height:1px;background:rgba(255,255,255,.1);margin:8px 0}
+.calc-highlight span{color:#C9A84C}
+.calc-highlight strong{color:#C9A84C;font-size:1.2rem}
+
+/* ---------- PROCESS SECTION ---------- */
+.process-section{
+    padding:100px 0;background:#1B3C2D;color:#fff;text-align:center;
+}
+.process-section .section-label{color:#C9A84C}
+.process-section .section-title{color:#fff}
+.process-section .section-subtitle{color:rgba(255,255,255,.6)}
+.process-steps{
+    display:grid;grid-template-columns:repeat(6,1fr);gap:20px;
+    margin-top:48px;
+}
+.process-step{
+    padding:28px 16px;border-radius:14px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.06);
+    transition:background .3s;
+}
+.process-step:hover{background:rgba(255,255,255,.08)}
+.step-number{
+    font-family:'Playfair Display',serif;font-size:2rem;
+    font-weight:700;color:#C9A84C;margin-bottom:12px;
+}
+.process-step h4{font-size:.9rem;font-weight:600;margin-bottom:8px}
+.process-step p{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6}
+
+/* ---------- FOOTER DISCLAIMER ---------- */
+.footer-disclaimer{
+    font-size:.8rem;color:#C9A84C;font-weight:600;
+    text-align:center;margin-bottom:16px;
+    padding:12px 20px;border-radius:8px;
+    background:rgba(201,168,76,.08);
+    border:1px solid rgba(201,168,76,.15);
+}
 
 /* ---------- PLANNING SECTION ---------- */
 .planning-section{padding:100px 0;background:#FAFAF7}
@@ -632,7 +758,7 @@ blockquote footer span{font-size:.8rem;color:#8A8A8A}
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:1024px){
     .solutions-grid,.planning-grid,.planning-grid-reverse,
-    .quote-grid,.contact-grid{
+    .quote-grid,.contact-grid,.calculator-grid{
         grid-template-columns:1fr;gap:40px;
     }
     .planning-grid-reverse{direction:ltr}
@@ -640,6 +766,8 @@ blockquote footer span{font-size:.8rem;color:#8A8A8A}
     .values-row,.awards-grid,.testimonials-grid,.insights-grid{
         grid-template-columns:repeat(2,1fr);
     }
+    .service-cards{grid-template-columns:repeat(2,1fr)}
+    .process-steps{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(max-width:768px){
@@ -684,9 +812,10 @@ blockquote footer span{font-size:.8rem;color:#8A8A8A}
     .hero-logos-inner{gap:20px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}
     .logo-badge{flex-shrink:0}
 
-    .values-row,.awards-grid,.testimonials-grid,.insights-grid{
+    .values-row,.awards-grid,.testimonials-grid,.insights-grid,.service-cards{
         grid-template-columns:1fr;
     }
+    .process-steps{grid-template-columns:repeat(2,1fr)}
     .form-row{grid-template-columns:1fr}
     .office-cards{grid-template-columns:1fr}
     .contact-form{padding:24px}

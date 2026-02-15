@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 logoTagline.textContent = mode === 'commercial' ? 'COMMERCIAL' : 'MONEY';
             }
 
+            // Handle commercial video play/pause
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                if (mode === 'commercial') {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                }
+            }
+
             // Re-trigger animations on newly visible sections
             document.querySelectorAll('.tab-' + mode + ' [data-animate]').forEach(el => {
                 if (!el.classList.contains('animated')) {
