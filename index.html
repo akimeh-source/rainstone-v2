@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainstone Commercial | Independent Mortgage &amp; Commercial Finance Brokers in the UK</title>
-    <meta name="description" content="Rainstone Money Commercial Finance — award-winning UK commercial finance brokers with over 100 years of combined banking experience. Commercial mortgages, bridging loans, business loans and more.">
+    <title>Rainstone Money | Independent Mortgage &amp; Commercial Finance Brokers in the UK</title>
+    <meta name="description" content="Rainstone Money — award-winning UK finance brokers with over 100 years of combined banking experience. Residential mortgages, commercial finance, bridging loans, business loans and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-mode="personal">
 
     <!-- ========== TOP BAR ========== -->
     <div class="top-bar">
@@ -32,22 +32,41 @@
 
     <!-- ========== HEADER / NAVIGATION ========== -->
     <header class="site-header" id="site-header">
+        <!-- Mode Tab Bar -->
+        <div class="mode-bar">
+            <div class="container mode-bar-inner">
+                <button class="mode-tab active" data-tab="personal">Personal</button>
+                <button class="mode-tab" data-tab="commercial">Commercial</button>
+            </div>
+        </div>
+
         <div class="container header-inner">
             <a href="/" class="logo" aria-label="Rainstone Money Home">
-                <!-- Inline SVG logo matching Rainstone branding -->
                 <svg class="logo-icon" viewBox="0 0 40 40" width="40" height="40">
                     <rect width="40" height="40" rx="6" fill="#C9A84C"/>
                     <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#1B3C2D" font-family="Playfair Display,serif" font-weight="700" font-size="22">R</text>
                 </svg>
                 <div class="logo-text">
                     <span class="logo-name">RAINSTONE</span>
-                    <span class="logo-tagline">COMMERCIAL</span>
+                    <span class="logo-tagline" id="logo-tagline">MONEY</span>
                 </div>
             </a>
 
             <nav class="main-nav" id="main-nav" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li class="nav-item has-dropdown">
+                    <!-- Personal nav items -->
+                    <li class="nav-item has-dropdown nav-personal">
+                        <a href="#services">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#services">Residential Mortgages</a></li>
+                            <li><a href="#services">Buy-to-Let Mortgages</a></li>
+                            <li><a href="#services">Remortgaging</a></li>
+                            <li><a href="#services">First-Time Buyers</a></li>
+                            <li><a href="#services">Foreign Nationals</a></li>
+                        </ul>
+                    </li>
+                    <!-- Commercial nav items -->
+                    <li class="nav-item has-dropdown nav-commercial">
                         <a href="#services">Our Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
                             <li><a href="#services">Commercial Finance</a></li>
@@ -57,6 +76,7 @@
                             <li><a href="#services">Foreign Nationals</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item has-dropdown">
                         <a href="#services">Insurance <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
@@ -90,21 +110,62 @@
         </div>
     </header>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero" id="hero">
+    <!-- ============================================================
+         PERSONAL / RESIDENTIAL MODE
+         ============================================================ -->
+
+    <!-- HERO — Personal -->
+    <section class="hero tab-personal" id="hero">
         <div class="hero-bg">
             <div class="hero-overlay"></div>
-            <!-- Video background placeholder — swap src for banner-video.mp4 -->
-            <div class="hero-image"></div>
+            <div class="hero-image hero-image-personal"></div>
         </div>
         <div class="container hero-content">
             <div class="hero-text" data-animate="fade-up">
                 <h1>Independent Mortgage &amp;<br>Commercial Finance<br>Brokers in the UK</h1>
-                <p class="hero-subtitle">Built for Complexity, Powered by Expertise — making <strong>Commercial Finance MADE EASY</strong></p>
+                <p class="hero-subtitle">Helping homeowners, first-time buyers, and landlords across the UK secure the best mortgage deals — <strong>Personal Finance MADE EASY</strong></p>
                 <a href="#contact" class="btn btn-primary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-        <!-- Partner / Award logos strip -->
+        <div class="hero-logos">
+            <div class="container hero-logos-inner">
+                <div class="logo-badge" data-animate="fade-up" data-delay="100">
+                    <div class="badge-icon"><i class="fas fa-award"></i></div>
+                    <span>NACFB Member</span>
+                </div>
+                <div class="logo-badge" data-animate="fade-up" data-delay="200">
+                    <div class="badge-icon"><i class="fas fa-trophy"></i></div>
+                    <span>BTL Broker of the Year 2024</span>
+                </div>
+                <div class="logo-badge" data-animate="fade-up" data-delay="300">
+                    <div class="badge-icon"><i class="fas fa-star"></i></div>
+                    <span>Best Brokerage Firm 2024</span>
+                </div>
+                <div class="logo-badge" data-animate="fade-up" data-delay="400">
+                    <div class="badge-icon"><i class="fas fa-shield-halved"></i></div>
+                    <span>FCA Authorised</span>
+                </div>
+                <div class="logo-badge" data-animate="fade-up" data-delay="500">
+                    <div class="badge-icon"><i class="fas fa-medal"></i></div>
+                    <span>SME News Winner</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO — Commercial -->
+    <section class="hero tab-commercial" id="hero-commercial">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-image hero-image-commercial"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text" data-animate="fade-up">
+                <h1>Commercial Finance<br>MADE EASY</h1>
+                <p class="hero-subtitle">Built for Complexity, Powered by Expertise — delivering tailored funding solutions for businesses, developers, and <strong>high-net-worth individuals</strong></p>
+                <a href="#contact" class="btn btn-primary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
         <div class="hero-logos">
             <div class="container hero-logos-inner">
                 <div class="logo-badge" data-animate="fade-up" data-delay="100">
@@ -132,7 +193,7 @@
     </section>
 
     <!-- ========== PERSONAL FINANCE SOLUTIONS ========== -->
-    <section class="solutions-section" id="personal-finance">
+    <section class="solutions-section tab-personal" id="personal-finance">
         <div class="container">
             <div class="section-label" data-animate="fade-up">WHAT WE DO</div>
             <h2 class="section-title" data-animate="fade-up">Personal Finance <span class="text-accent">Solutions</span></h2>
@@ -185,7 +246,7 @@
     </section>
 
     <!-- ========== COMMERCIAL FINANCE SOLUTIONS ========== -->
-    <section class="solutions-section solutions-alt" id="services">
+    <section class="solutions-section solutions-alt tab-commercial" id="services">
         <div class="container">
             <div class="section-label" data-animate="fade-up">WHAT WE DO</div>
             <h2 class="section-title" data-animate="fade-up">Commercial Finance <span class="text-accent">Solutions</span></h2>
@@ -236,8 +297,8 @@
         </div>
     </section>
 
-    <!-- ========== INTERACTIVE PLANNING — LIGHT ========== -->
-    <section class="planning-section" id="planning">
+    <!-- ========== INTERACTIVE PLANNING — LIGHT (Personal) ========== -->
+    <section class="planning-section tab-personal" id="planning">
         <div class="container planning-grid">
             <div class="planning-content" data-animate="fade-right">
                 <h2>Interactive Planning<br>Approach</h2>
@@ -270,8 +331,8 @@
         </div>
     </section>
 
-    <!-- ========== INTERACTIVE PLANNING — DARK ========== -->
-    <section class="planning-section planning-dark">
+    <!-- ========== INTERACTIVE PLANNING — DARK (Commercial) ========== -->
+    <section class="planning-section planning-dark tab-commercial" id="planning-commercial">
         <div class="container planning-grid planning-grid-reverse">
             <div class="planning-image" data-animate="fade-right">
                 <div class="image-placeholder planning-img">
@@ -285,6 +346,10 @@
             </div>
         </div>
     </section>
+
+    <!-- ============================================================
+         SHARED SECTIONS (visible in both modes)
+         ============================================================ -->
 
     <!-- ========== AWARDS & RECOGNITION ========== -->
     <section class="awards-section" id="awards">
@@ -583,10 +648,10 @@
                         </svg>
                         <div class="logo-text">
                             <span class="logo-name">RAINSTONE</span>
-                            <span class="logo-tagline">COMMERCIAL</span>
+                            <span class="logo-tagline">MONEY</span>
                         </div>
                     </a>
-                    <p>Award-winning commercial finance brokers bringing over 100 years of combined banking experience to help businesses and individuals achieve their financial goals.</p>
+                    <p>Award-winning finance brokers bringing over 100 years of combined banking experience to help businesses and individuals achieve their financial goals.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
@@ -597,33 +662,33 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
-                        <h5>Industries</h5>
+                        <h5>Personal</h5>
                         <ul>
-                            <li><a href="#">Real Estate</a></li>
-                            <li><a href="#">Defence &amp; Justice</a></li>
-                            <li><a href="#">Energy &amp; Petroleum</a></li>
-                            <li><a href="#">Investment Management</a></li>
-                            <li><a href="#">Natural Resources</a></li>
+                            <li><a href="#">Residential Mortgages</a></li>
+                            <li><a href="#">Buy-to-Let</a></li>
+                            <li><a href="#">Remortgaging</a></li>
+                            <li><a href="#">First-Time Buyers</a></li>
+                            <li><a href="#">Lifetime Mortgages</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h5>Services</h5>
+                        <h5>Commercial</h5>
                         <ul>
                             <li><a href="#services">Commercial Finance</a></li>
                             <li><a href="#services">Bridging Loans</a></li>
                             <li><a href="#services">Business Loans</a></li>
-                            <li><a href="#services">Risk &amp; Financial Advisory</a></li>
-                            <li><a href="#services">Debt &amp; Restructuring</a></li>
+                            <li><a href="#services">Development Finance</a></li>
+                            <li><a href="#services">Asset Finance</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h5>Quick Links</h5>
                         <ul>
-                            <li><a href="#about">Our Philosophy</a></li>
-                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About Us</a></li>
                             <li><a href="#insights">Case Studies</a></li>
+                            <li><a href="#">Insurance</a></li>
                             <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#contact">Our Team</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

@@ -3,6 +3,36 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // ---- Mode Tab Switching (Personal / Commercial) ----
+    const modeTabs = document.querySelectorAll('.mode-tab');
+    const logoTagline = document.getElementById('logo-tagline');
+
+    modeTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const mode = tab.dataset.tab;
+            document.body.setAttribute('data-mode', mode);
+
+            // Update active tab
+            modeTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Update logo tagline
+            if (logoTagline) {
+                logoTagline.textContent = mode === 'commercial' ? 'COMMERCIAL' : 'MONEY';
+            }
+
+            // Re-trigger animations on newly visible sections
+            document.querySelectorAll('.tab-' + mode + ' [data-animate]').forEach(el => {
+                if (!el.classList.contains('animated')) {
+                    el.classList.add('animated');
+                }
+            });
+
+            // Scroll to top of page on switch
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
     // ---- Mobile Navigation ----
     const toggle = document.getElementById('mobile-toggle');
     const nav = document.getElementById('main-nav');

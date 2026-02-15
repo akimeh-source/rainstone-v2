@@ -87,6 +87,44 @@ input,textarea,select{font-family:inherit;font-size:inherit}
 .top-bar-right a{color:rgba(255,255,255,.7);font-size:.85rem}
 .top-bar-right a:hover{color:#C9A84C}
 
+/* ---------- MODE TAB BAR ---------- */
+.mode-bar{
+    background:#152E22;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mode-bar-inner{
+    display:flex;align-items:center;gap:0;
+    padding:0;
+}
+.mode-tab{
+    padding:10px 28px;font-size:.85rem;font-weight:600;
+    color:rgba(255,255,255,.5);letter-spacing:.5px;
+    border:none;background:transparent;cursor:pointer;
+    position:relative;transition:color .3s,background .3s;
+    font-family:'Inter',system-ui,sans-serif;
+}
+.mode-tab:hover{color:rgba(255,255,255,.8)}
+.mode-tab.active{
+    color:#fff;
+    background:rgba(255,255,255,.06);
+}
+.mode-tab.active::after{
+    content:'';position:absolute;bottom:0;left:0;right:0;
+    height:2px;background:#C9A84C;
+}
+
+/* Tab visibility — driven by body[data-mode] */
+.tab-personal{display:block}
+.tab-commercial{display:none}
+body[data-mode="commercial"] .tab-personal{display:none}
+body[data-mode="commercial"] .tab-commercial{display:block}
+
+/* Nav items that swap per mode */
+.nav-personal{display:flex}
+.nav-commercial{display:none !important}
+body[data-mode="commercial"] .nav-personal{display:none !important}
+body[data-mode="commercial"] .nav-commercial{display:flex !important}
+
 /* ---------- HEADER ---------- */
 .site-header{
     position:sticky;top:0;z-index:1000;
@@ -181,8 +219,14 @@ input,textarea,select{font-family:inherit;font-size:inherit}
 }
 .hero-image{
     position:absolute;inset:0;
+}
+.hero-image-personal{
     background:linear-gradient(135deg,#2A5A3F 0%,#1B3C2D 40%,#3d7a5a 100%);
-    /* Replace with: background:url('../images/hero.jpg') center/cover; */
+    /* Replace with: background:url('../images/hero-personal.jpg') center/cover; */
+}
+.hero-image-commercial{
+    background:linear-gradient(135deg,#1B3C2D 0%,#152E22 40%,#2A5A3F 100%);
+    /* Replace with: background:url('../images/hero-commercial.jpg') center/cover; */
 }
 .hero-content{position:relative;z-index:2;padding:120px 0 80px}
 .hero-text{max-width:680px}
@@ -601,6 +645,7 @@ blockquote footer span{font-size:.8rem;color:#8A8A8A}
 @media(max-width:768px){
     .top-bar-left{flex-direction:column;gap:4px}
     .top-bar{padding:6px 0;font-size:.75rem}
+    .mode-tab{padding:8px 20px;font-size:.8rem}
 
     /* Mobile nav */
     .main-nav{
