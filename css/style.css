@@ -244,6 +244,12 @@ input, textarea, select { font-family: inherit; font-size: inherit }
 body[data-mode="commercial"] .tab-personal { display: none }
 body[data-mode="commercial"] .tab-commercial { display: block }
 
+/* Hero sections need grid, not block — higher specificity overrides */
+.hero-split.tab-personal { display: grid }
+.hero-split.tab-commercial { display: none }
+body[data-mode="commercial"] .hero-split.tab-personal { display: none }
+body[data-mode="commercial"] .hero-split.tab-commercial { display: grid }
+
 /* Nav items that swap per mode */
 .nav-personal { display: flex }
 .nav-commercial { display: none !important }
@@ -543,8 +549,8 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
     to   { opacity: 1; transform: scale(1) }
 }
 @keyframes heroLineGrow {
-    from { transform: scaleY(0) }
-    to   { transform: scaleY(1) }
+    from { opacity: 0; transform: scaleY(0) }
+    to   { opacity: 1; transform: scaleY(1) }
 }
 
 .hero-anim {
