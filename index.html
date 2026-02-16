@@ -153,43 +153,38 @@
     </section>
 
     <!-- ================================================================
-         COMMERCIAL HERO — with cinematic video background
+         COMMERCIAL HERO — Split-Screen with video
          ================================================================ -->
-    <section class="hero hero-commercial-bg tab-commercial" id="hero-commercial">
-        <div class="hero-bg">
-            <div class="hero-overlay hero-overlay-commercial"></div>
-            <video class="hero-video" autoplay muted loop playsinline preload="auto">
-                <source src="videos/commercial-hero.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text" data-animate="fade-up">
-                <h1>Commercial Finance<br><span class="text-accent">MADE EASY</span></h1>
-                <p class="hero-subtitle">Built for Complexity, Powered by Expertise. Delivering tailored funding solutions for businesses, developers, and high-net-worth individuals.</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
+    <section class="hero hero-split tab-commercial" id="hero-commercial">
+        <div class="hero-panel-left">
+            <div class="hero-grain"></div>
+            <div class="hero-diagonal-accent"></div>
+            <div class="hero-text-wrap">
+                <div class="hero-gold-line hero-anim" style="--delay:0ms"></div>
+                <div class="hero-label hero-anim" style="--delay:100ms">Commercial Specialists</div>
+                <h1>
+                    <span class="hero-line hero-anim" style="--delay:200ms">Commercial Finance</span>
+                    <span class="hero-line hero-anim" style="--delay:350ms"><em class="text-gold-italic">MADE EASY</em></span>
+                </h1>
+                <p class="hero-subtitle hero-anim" style="--delay:500ms">Built for Complexity, Powered by Expertise <span class="gold-dot">&middot;</span> Tailored funding for businesses, developers, and high-net-worth individuals</p>
+                <div class="hero-btns hero-anim" style="--delay:650ms">
+                    <a href="#contact" class="btn btn-secondary">Book A Consultation <i class="fas fa-arrow-right"></i></a>
                     <a href="#about" class="btn btn-outline-light">Speak to an Expert <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
+        <div class="hero-panel-right">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto">
+                <source src="videos/commercial-hero.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="hero-logos">
             <div class="container hero-logos-inner">
-                <div class="logo-badge" data-animate="fade-up" data-delay="100">
-                    <div class="badge-icon"><i class="fas fa-award"></i></div>
-                    <span>NACFB Member</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="200">
-                    <div class="badge-icon"><i class="fas fa-trophy"></i></div>
-                    <span>BTL Broker of the Year 2024</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="300">
-                    <div class="badge-icon"><i class="fas fa-star"></i></div>
-                    <span>Best Brokerage Firm 2024</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="400">
-                    <div class="badge-icon"><i class="fas fa-medal"></i></div>
-                    <span>Most Innovative 2023</span>
-                </div>
+                <img class="hero-logo-img hero-anim" style="--delay:750ms" src="images/logos/nacfb.svg" alt="NACFB Member" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:850ms" src="images/logos/fca.svg" alt="FCA Authorised" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:950ms" src="images/logos/commercial-broker-awards.svg" alt="BTL Broker of the Year 2024" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:1050ms" src="images/logos/sme-news-awards.svg" alt="Most Innovative 2023" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:1150ms" src="images/logos/signature-awards.svg" alt="Excellence in Financial Services 2023" loading="eager">
             </div>
         </div>
     </section>
