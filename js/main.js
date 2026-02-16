@@ -94,10 +94,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- Sticky Header Shadow ----
+    // ---- Sticky Header + Scroll Progress ----
     const header = document.getElementById('site-header');
+    const scrollProgress = document.getElementById('scroll-progress');
+
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 10);
+
+        // Update scroll progress bar
+        if (scrollProgress) {
+            const docH = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+            scrollProgress.style.width = pct + '%';
+        }
     }, { passive: true });
 
     // ---- Smooth Scroll for Anchor Links ----
@@ -210,10 +219,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcBtn = document.getElementById('calc-btn');
     const calcTermSlider = document.getElementById('calc-term');
     const calcTermVal = document.getElementById('calc-term-val');
+    const calcDebt = document.getElementById('calc-debt');
 
     if (calcTermSlider && calcTermVal) {
         calcTermSlider.addEventListener('input', () => {
             calcTermVal.textContent = calcTermSlider.value;
+        });
+    }
+
+    // Live comma formatting on debt input
+    if (calcDebt) {
+        calcDebt.addEventListener('input', () => {
+            const raw = calcDebt.value.replace(/[^0-9]/g, '');
+            if (raw) {
+                calcDebt.value = parseInt(raw, 10).toLocaleString('en-GB');
+            }
         });
     }
 
@@ -253,6 +273,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.getElementById('calc-results').classList.add('visible');
         });
+    }
+
+    // ---- Subtle Hero Parallax ----
+    const heroImages = document.querySelectorAll('.hero-image, .hero-video');
+    if (heroImages.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const y = window.scrollY;
+                    if (y < window.innerHeight) {
+                        heroImages.forEach(el => {
+                            el.style.transform = 'translateY(' + (y * 0.25) + 'px) scale(1.05)';
+                        });
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
     }
 
     // ---- Stat Counter Animation ----
