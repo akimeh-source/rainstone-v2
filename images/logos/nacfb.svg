@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <!-- Shield background -->
+  <path d="M30 8 L170 8 Q180 8 180 18 L180 50 Q180 60 170 68 L105 76 Q100 77 95 76 L30 68 Q20 60 20 50 L20 18 Q20 8 30 8 Z" fill="#1a1a1a"/>
+  <!-- Inner border -->
+  <path d="M30 8 L170 8 Q180 8 180 18 L180 50 Q180 60 170 68 L105 76 Q100 77 95 76 L30 68 Q20 60 20 50 L20 18 Q20 8 30 8 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Decorative line -->
+  <line x1="35" y1="44" x2="165" y2="44" stroke="#333" stroke-width="0.75"/>
+  <!-- NACFB text -->
+  <text x="100" y="35" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#e0e0e0" text-anchor="middle" letter-spacing="4">NACFB</text>
+  <!-- Subtitle -->
+  <text x="100" y="56" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#999" text-anchor="middle" letter-spacing="1.5">MEMBER</text>
+  <!-- Small decorative elements -->
+  <text x="100" y="67" font-family="Arial, Helvetica, sans-serif" font-size="5.5" fill="#666" text-anchor="middle" letter-spacing="0.5">Commercial Finance Brokers</text>
+</svg>

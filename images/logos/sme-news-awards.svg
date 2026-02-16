@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <!-- Circular badge background -->
+  <ellipse cx="100" cy="40" rx="88" ry="36" fill="#1a1a1a"/>
+  <ellipse cx="100" cy="40" rx="88" ry="36" fill="none" stroke="#333" stroke-width="1"/>
+  <!-- Inner ellipse border -->
+  <ellipse cx="100" cy="40" rx="82" ry="31" fill="none" stroke="#333" stroke-width="0.5"/>
+  <!-- Laurel left -->
+  <path d="M28 40 Q32 30 38 25 Q34 32 34 40 Q34 48 38 55 Q32 50 28 40 Z" fill="#444"/>
+  <path d="M33 35 Q37 27 43 23 Q39 30 39 37 Q39 44 43 50 Q37 46 33 35 Z" fill="#444"/>
+  <!-- Laurel right -->
+  <path d="M172 40 Q168 30 162 25 Q166 32 166 40 Q166 48 162 55 Q168 50 172 40 Z" fill="#444"/>
+  <path d="M167 35 Q163 27 157 23 Q161 30 161 37 Q161 44 157 50 Q163 46 167 35 Z" fill="#444"/>
+  <!-- Title -->
+  <text x="100" y="30" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#e0e0e0" text-anchor="middle" letter-spacing="2">SME NEWS</text>
+  <text x="100" y="42" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#e0e0e0" text-anchor="middle" letter-spacing="2">AWARDS</text>
+  <!-- Divider -->
+  <line x1="55" y1="47" x2="145" y2="47" stroke="#444" stroke-width="0.5"/>
+  <!-- Detail -->
+  <text x="100" y="57" font-family="Arial, Helvetica, sans-serif" font-size="6" fill="#999" text-anchor="middle" letter-spacing="0.5">Most Innovative 2023</text>
+</svg>
