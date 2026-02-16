@@ -1699,6 +1699,30 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
     margin-top: 6px;
 }
 
+/* ---------- SECTION CURVE DIVIDERS ---------- */
+.section-curve {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.section-curve svg {
+    display: block;
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+.section-curve-sm svg {
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .section-curve svg { height: 40px }
+    .section-curve-sm svg { height: 24px }
+}
+
 /* ---------- ANIMATIONS ---------- */
 [data-animate] {
     opacity: 0;
