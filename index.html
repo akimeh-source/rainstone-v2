@@ -90,6 +90,7 @@
                         </ul>
                     </li>
                     <li class="nav-item nav-personal"><a href="#personal-finance">Foreign Nationals</a></li>
+                    <li class="nav-item nav-personal"><a href="#calculator">Calculator</a></li>
                     <li class="nav-item"><a href="#">Network</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-cta">Book Consultation</a></li>
                     <li class="nav-item has-dropdown">
@@ -97,7 +98,7 @@
                         <ul class="dropdown">
                             <li><a href="#about">Who We Are</a></li>
                             <li><a href="#about">Meet The Team</a></li>
-                            <li><a href="#insights">Case Studies</a></li>
+                            <li><a href="#case-studies">Case Studies</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="#contact">Contact Us</a></li>
@@ -214,9 +215,7 @@
                     <a href="#contact" class="btn btn-primary">Let's get started <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="solutions-image" data-animate="fade-left">
-                    <div class="image-placeholder personal-img">
-                        <i class="fas fa-home"></i>
-                    </div>
+                    <div class="image-placeholder personal-img"></div>
                 </div>
             </div>
 
@@ -294,9 +293,7 @@
                     <a href="#contact" class="btn btn-primary">Let's get started <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="solutions-image" data-animate="fade-left">
-                    <div class="image-placeholder commercial-img">
-                        <i class="fas fa-building"></i>
-                    </div>
+                    <div class="image-placeholder commercial-img"></div>
                 </div>
             </div>
 
@@ -405,9 +402,7 @@
     <section class="planning-section planning-dark tab-commercial" id="planning-commercial">
         <div class="container planning-grid planning-grid-reverse">
             <div class="planning-image" data-animate="fade-right">
-                <div class="image-placeholder planning-img">
-                    <i class="fas fa-chart-pie"></i>
-                </div>
+                <div class="image-placeholder planning-img"></div>
             </div>
             <div class="planning-content" data-animate="fade-left">
                 <h2>Interactive Planning<br>Approach</h2>
@@ -425,27 +420,46 @@
             <div class="calculator-content" data-animate="fade-right">
                 <div class="section-label">TOOLS</div>
                 <h2>Try Our Mortgage <span class="text-accent">Calculator</span></h2>
-                <p>Work out how much you could borrow and how much deposit you need for a mortgage. Our free calculator gives you an instant estimate based on your income and circumstances.</p>
-                <a href="#" class="btn btn-primary">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                <p>Work out how much you could borrow and what your monthly payments might look like. Our free calculator gives you an instant estimate for both interest-only and repayment mortgages.</p>
+                <p style="font-size:.82rem;opacity:.5;margin-top:16px">This calculator serves as a general guide and may not reflect exact costs. It&rsquo;s crucial that you obtain a personalised quote.</p>
             </div>
             <div class="calculator-visual" data-animate="fade-left">
                 <div class="calc-card">
-                    <div class="calc-row">
-                        <span>Property value</span>
-                        <strong>&pound;350,000</strong>
+                    <div class="calc-form-group">
+                        <label for="calc-debt">Mortgage Amount (&pound;)</label>
+                        <input type="text" id="calc-debt" placeholder="e.g. 250000" value="250000">
                     </div>
-                    <div class="calc-row">
-                        <span>Deposit (15%)</span>
-                        <strong>&pound;52,500</strong>
+                    <div class="calc-form-group">
+                        <label for="calc-term">Mortgage Term: <span id="calc-term-val">25</span> years</label>
+                        <div class="calc-slider-row">
+                            <input type="range" id="calc-term" min="1" max="40" value="25">
+                        </div>
                     </div>
-                    <div class="calc-row">
-                        <span>Loan amount</span>
-                        <strong>&pound;297,500</strong>
+                    <div class="calc-form-group">
+                        <label for="calc-rate">Interest Rate (%)</label>
+                        <input type="text" id="calc-rate" placeholder="e.g. 5.5" value="5.5">
                     </div>
-                    <div class="calc-divider"></div>
-                    <div class="calc-row calc-highlight">
-                        <span>Est. monthly payment</span>
-                        <strong>&pound;1,420</strong>
+                    <button class="calc-btn" id="calc-btn">Calculate Mortgage <i class="fas fa-calculator"></i></button>
+                    <div class="calc-results" id="calc-results">
+                        <div class="calc-divider" style="margin:20px 0"></div>
+                        <div class="calc-results-grid">
+                            <div class="calc-result-box">
+                                <span class="calc-label">Monthly (Interest Only)</span>
+                                <span class="calc-value" id="res-io-monthly">&pound;0</span>
+                            </div>
+                            <div class="calc-result-box">
+                                <span class="calc-label">Total (Interest Only)</span>
+                                <span class="calc-value" id="res-io-total">&pound;0</span>
+                            </div>
+                            <div class="calc-result-box">
+                                <span class="calc-label">Monthly (Repayment)</span>
+                                <span class="calc-value" id="res-rp-monthly">&pound;0</span>
+                            </div>
+                            <div class="calc-result-box">
+                                <span class="calc-label">Total (Repayment)</span>
+                                <span class="calc-value" id="res-rp-total">&pound;0</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -544,14 +558,70 @@
     </section>
 
     <!-- ================================================================
+         SHARED — Case Studies
+         ================================================================ -->
+    <section class="case-studies-section" id="case-studies">
+        <div class="container">
+            <div class="section-label" data-animate="fade-up">PROVEN RESULTS</div>
+            <h2 class="section-title" data-animate="fade-up">Our Case <span class="text-accent">Studies</span></h2>
+            <p class="section-subtitle" data-animate="fade-up">Real deals, real results. See how we've helped clients navigate complex finance challenges.</p>
+            <div class="case-studies-grid" data-animate="fade-up">
+                <div class="case-study-card">
+                    <span class="cs-tag">Bridging Loan</span>
+                    <h4>7-Property Portfolio Saved from Repossession</h4>
+                    <div class="cs-stats">
+                        <div class="cs-stat"><span class="cs-stat-label">Property Value</span><span class="cs-stat-value">&pound;5,000,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">Loan</span><span class="cs-stat-value">&pound;3,000,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">LTV</span><span class="cs-stat-value">68%</span></div>
+                    </div>
+                    <p>Client held seven individual loans where the lender called in all properties with only 14 days to repay. We arranged a &pound;3M bridging facility, completing in just 3 weeks with minutes to spare.</p>
+                    <div class="cs-quote">&ldquo;As a team, nurturing a long-standing relationship with the client really aided the performance.&rdquo;<strong>Foyaz Ahmed, CEO</strong></div>
+                </div>
+                <div class="case-study-card">
+                    <span class="cs-tag">BTL Term Loan</span>
+                    <h4>Grade II Listed Manor House &mdash; 55 Acres</h4>
+                    <div class="cs-stats">
+                        <div class="cs-stat"><span class="cs-stat-label">Property Value</span><span class="cs-stat-value">&pound;5,200,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">Loan</span><span class="cs-stat-value">&pound;2,600,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">LTV</span><span class="cs-stat-value">50%</span></div>
+                    </div>
+                    <p>High-net-worth client acquired a historic manor with subsidence issues. Our strategic guidance helped secure the asset at &pound;1M below asking price, overcoming structural and lettability concerns.</p>
+                </div>
+                <div class="case-study-card">
+                    <span class="cs-tag">Residential Purchase</span>
+                    <h4>&pound;570K Foreign National Purchase &mdash; Battersea</h4>
+                    <div class="cs-stats">
+                        <div class="cs-stat"><span class="cs-stat-label">Property Value</span><span class="cs-stat-value">&pound;1,100,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">Loan</span><span class="cs-stat-value">&pound;570,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">LTV</span><span class="cs-stat-value">55%</span></div>
+                    </div>
+                    <p>Non-UK national living in the US, rejected by four previous brokers. No UK payslips or credit history. We structured a solution utilising US income and successfully completed the purchase.</p>
+                    <div class="cs-quote">&ldquo;Having a good broker who has access to the whole market is very important.&rdquo;<strong>Rahul Modasia, Director</strong></div>
+                </div>
+                <div class="case-study-card">
+                    <span class="cs-tag">Development Finance</span>
+                    <h4>&pound;7.4M Complex Development &mdash; Ashford, Kent</h4>
+                    <div class="cs-stats">
+                        <div class="cs-stat"><span class="cs-stat-label">GDV</span><span class="cs-stat-value">&pound;14,000,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">Loan</span><span class="cs-stat-value">&pound;7,400,000</span></div>
+                        <div class="cs-stat"><span class="cs-stat-label">LTV</span><span class="cs-stat-value">54%</span></div>
+                    </div>
+                    <p>Ground-up development financing for five large industrial/warehouse units (48,079 sqft) at Orbital Park for Portuguese and Turkish investors, targeting the undersupplied industrial sector.</p>
+                </div>
+            </div>
+            <div class="section-cta" data-animate="fade-up">
+                <a href="#contact" class="btn btn-outline">Discuss Your Case <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
          SHARED — About / Director Quote
          ================================================================ -->
     <section class="quote-section" id="about">
         <div class="container quote-grid">
             <div class="quote-image" data-animate="fade-right">
-                <div class="image-placeholder quote-img">
-                    <i class="fas fa-user-tie"></i>
-                </div>
+                <div class="image-placeholder quote-img"></div>
             </div>
             <div class="quote-content" data-animate="fade-left">
                 <div class="section-label">ABOUT US</div>
@@ -637,7 +707,7 @@
             <div class="insights-grid" data-animate="fade-up">
                 <div class="insight-card">
                     <div class="insight-image">
-                        <div class="insight-placeholder"><i class="fas fa-chart-bar"></i></div>
+                        <img class="insight-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Financial data analysis on laptop screen">
                         <span class="insight-tag">Commercial Finance</span>
                     </div>
                     <div class="insight-body">
@@ -648,18 +718,18 @@
                 </div>
                 <div class="insight-card">
                     <div class="insight-image">
-                        <div class="insight-placeholder"><i class="fas fa-heartbeat"></i></div>
-                        <span class="insight-tag">Healthcare</span>
+                        <img class="insight-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Business planning and strategy meeting">
+                        <span class="insight-tag">Investment</span>
                     </div>
                     <div class="insight-body">
-                        <h4>Healthcare Private Equity Market 2024: Year in Review and Outlook</h4>
-                        <p>A comprehensive overview of the healthcare private equity landscape and what it means for investors.</p>
+                        <h4>Private Equity Market 2024: Year in Review and Outlook</h4>
+                        <p>A comprehensive overview of the private equity landscape and what it means for investors and business owners.</p>
                         <a href="#" class="btn btn-text">Read Insight <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="insight-card">
                     <div class="insight-image">
-                        <div class="insight-placeholder"><i class="fas fa-landmark"></i></div>
+                        <img class="insight-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Property keys and documents on desk">
                         <span class="insight-tag">Property</span>
                     </div>
                     <div class="insight-body">
@@ -846,7 +916,7 @@
                         <h5>Quick Links</h5>
                         <ul>
                             <li><a href="#about">About Us</a></li>
-                            <li><a href="#insights">Case Studies</a></li>
+                            <li><a href="#case-studies">Case Studies</a></li>
                             <li><a href="#">Insurance</a></li>
                             <li><a href="#">Financial Health Check</a></li>
                             <li><a href="#">Privacy Policy</a></li>

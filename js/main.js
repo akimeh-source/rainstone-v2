@@ -206,6 +206,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ---- Mortgage Calculator ----
+    const calcBtn = document.getElementById('calc-btn');
+    const calcTermSlider = document.getElementById('calc-term');
+    const calcTermVal = document.getElementById('calc-term-val');
+
+    if (calcTermSlider && calcTermVal) {
+        calcTermSlider.addEventListener('input', () => {
+            calcTermVal.textContent = calcTermSlider.value;
+        });
+    }
+
+    if (calcBtn) {
+        calcBtn.addEventListener('click', () => {
+            const debtRaw = document.getElementById('calc-debt').value.replace(/[^0-9.]/g, '');
+            const termYears = parseInt(calcTermSlider.value, 10);
+            const rateRaw = document.getElementById('calc-rate').value.replace(/[^0-9.]/g, '');
+
+            const debt = parseFloat(debtRaw);
+            const rate = parseFloat(rateRaw);
+
+            if (isNaN(debt) || isNaN(rate) || isNaN(termYears) || debt <= 0 || rate <= 0 || termYears <= 0) {
+                alert('Please enter valid positive numbers for all fields.');
+                return;
+            }
+
+            const monthlyRate = (rate / 100) / 12;
+            const totalMonths = termYears * 12;
+
+            // Interest Only
+            const ioMonthly = (debt * (rate / 100)) / 12;
+            const ioTotal = ioMonthly * totalMonths;
+
+            // Repayment (annuity formula)
+            const rpMonthly = debt * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
+                (Math.pow(1 + monthlyRate, totalMonths) - 1);
+            const rpTotal = rpMonthly * totalMonths;
+
+            // Format as GBP
+            const fmt = (n) => '£' + n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+            document.getElementById('res-io-monthly').textContent = fmt(ioMonthly);
+            document.getElementById('res-io-total').textContent = fmt(ioTotal);
+            document.getElementById('res-rp-monthly').textContent = fmt(rpMonthly);
+            document.getElementById('res-rp-total').textContent = fmt(rpTotal);
+
+            document.getElementById('calc-results').classList.add('visible');
+        });
+    }
+
     // ---- Stat Counter Animation ----
     const statNumbers = document.querySelectorAll('.stat-number');
     if (statNumbers.length && 'IntersectionObserver' in window) {
