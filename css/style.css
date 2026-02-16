@@ -1768,16 +1768,30 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
     }
     .nav-overlay.active { opacity: 1; visibility: visible }
 
-    .hero-text h1 { font-size: clamp(1.8rem, 7vw, 2.8rem) }
-    .hero-content { padding: 80px 0 60px }
+    /* Split hero stacks on mobile */
+    .hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    .hero-panel-left {
+        padding: 100px 24px 80px;
+    }
+    .hero-panel-right {
+        clip-path: none;
+        height: 40vh;
+    }
+    .hero-split h1 { font-size: clamp(1.8rem, 7vw, 2.8rem) }
     .hero-logos-inner {
-        gap: 20px;
+        gap: 24px;
         justify-content: flex-start;
         overflow-x: auto;
         flex-wrap: nowrap;
         padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
     }
-    .logo-badge { flex-shrink: 0 }
+    .hero-logo-img { flex-shrink: 0 }
+    .hero-logos { position: relative }
+    .hero-diagonal-accent { display: none }
 
     .values-row, .awards-grid, .testimonials-grid, .insights-grid,
     .service-cards, .case-studies-grid {
@@ -1803,6 +1817,7 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
     .container { padding: 0 16px }
     .top-bar-right { display: none }
     .footer-links { grid-template-columns: 1fr }
-    .hero-text h1 { font-size: 1.8rem }
+    .hero-split h1 { font-size: 1.8rem }
+    .hero-panel-right { height: 30vh }
     .section-label::before, .section-label::after { display: none }
 }
