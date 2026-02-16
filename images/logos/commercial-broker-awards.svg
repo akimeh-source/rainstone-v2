@@ -1,14 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-  <!-- Badge background - trophy/award shape -->
-  <path d="M25 10 L175 10 Q182 10 182 17 L182 55 L175 70 L100 76 L25 70 L18 55 L18 17 Q18 10 25 10 Z" fill="#1a1a1a"/>
-  <path d="M25 10 L175 10 Q182 10 182 17 L182 55 L175 70 L100 76 L25 70 L18 55 L18 17 Q18 10 25 10 Z" fill="none" stroke="#333" stroke-width="1"/>
-  <!-- Star decoration -->
-  <polygon points="100,13 103,20 110,20 104,24 106,31 100,27 94,31 96,24 90,20 97,20" fill="#555"/>
-  <!-- Award title -->
-  <text x="100" y="42" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#e0e0e0" text-anchor="middle" letter-spacing="1">COMMERCIAL BROKER</text>
-  <text x="100" y="52" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#e0e0e0" text-anchor="middle" letter-spacing="1">AWARDS</text>
-  <!-- Divider -->
-  <line x1="55" y1="57" x2="145" y2="57" stroke="#444" stroke-width="0.5"/>
-  <!-- Award detail -->
-  <text x="100" y="65" font-family="Arial, Helvetica, sans-serif" font-size="6" fill="#999" text-anchor="middle" letter-spacing="0.5">BTL Broker of the Year 2024</text>
+  <!-- Star icon -->
+  <polygon points="100,4 106,24 128,24 110,36 117,56 100,44 83,56 90,36 72,24 94,24" fill="none" stroke="#222" stroke-width="1.5"/>
+  <!-- Award text -->
+  <text x="100" y="66" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="1.5">COMMERCIAL BROKER AWARDS</text>
+  <!-- Year -->
+  <text x="100" y="76" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="400" fill="#222" text-anchor="middle" letter-spacing="1">BTL BROKER OF THE YEAR 2024</text>
 </svg>

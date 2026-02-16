@@ -1,14 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-  <!-- Shield background -->
-  <path d="M30 8 L170 8 Q180 8 180 18 L180 50 Q180 60 170 68 L105 76 Q100 77 95 76 L30 68 Q20 60 20 50 L20 18 Q20 8 30 8 Z" fill="#1a1a1a"/>
-  <!-- Inner border -->
-  <path d="M30 8 L170 8 Q180 8 180 18 L180 50 Q180 60 170 68 L105 76 Q100 77 95 76 L30 68 Q20 60 20 50 L20 18 Q20 8 30 8 Z" fill="none" stroke="#333" stroke-width="1.5"/>
-  <!-- Decorative line -->
-  <line x1="35" y1="44" x2="165" y2="44" stroke="#333" stroke-width="0.75"/>
+  <!-- Shield outline only -->
+  <path d="M30 6 L170 6 Q178 6 178 14 L178 48 Q178 58 168 64 L105 74 Q100 75 95 74 L32 64 Q22 58 22 48 L22 14 Q22 6 30 6 Z" fill="none" stroke="#222" stroke-width="2"/>
   <!-- NACFB text -->
-  <text x="100" y="35" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#e0e0e0" text-anchor="middle" letter-spacing="4">NACFB</text>
+  <text x="100" y="34" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="3">NACFB</text>
+  <!-- Divider line -->
+  <line x1="55" y1="42" x2="145" y2="42" stroke="#222" stroke-width="1"/>
   <!-- Subtitle -->
-  <text x="100" y="56" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#999" text-anchor="middle" letter-spacing="1.5">MEMBER</text>
-  <!-- Small decorative elements -->
-  <text x="100" y="67" font-family="Arial, Helvetica, sans-serif" font-size="5.5" fill="#666" text-anchor="middle" letter-spacing="0.5">Commercial Finance Brokers</text>
+  <text x="100" y="56" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="600" fill="#222" text-anchor="middle" letter-spacing="2">MEMBER</text>
 </svg>
