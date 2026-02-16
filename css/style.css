@@ -390,7 +390,7 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
     position: relative;
     display: grid;
     grid-template-columns: 55% 45%;
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
     overflow: hidden;
 }
 
@@ -485,10 +485,10 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
 
 /* Subtitle */
 .hero-split .hero-subtitle {
-    color: rgba(255,255,255,.7);
-    font-size: 1.05rem;
+    color: rgba(255,255,255,.82);
+    font-size: 1.08rem;
     margin-bottom: 40px;
-    line-height: 1.8;
+    line-height: 1.7;
     letter-spacing: .01em;
 }
 .gold-dot {
@@ -585,9 +585,9 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
     flex-wrap: wrap;
 }
 .hero-logo-img {
-    max-height: 36px;
+    max-height: 42px;
     width: auto;
-    opacity: .65;
+    opacity: .8;
     filter: brightness(0) invert(1);
     transition: opacity .4s var(--ease-out), filter .4s;
 }
@@ -1796,6 +1796,7 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
         height: 40vh;
     }
     .hero-split h1 { font-size: clamp(1.8rem, 7vw, 2.8rem) }
+    .hero-gold-line { height: 36px }
     .hero-logos-inner {
         gap: 24px;
         justify-content: flex-start;
