@@ -496,6 +496,15 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
     gap: 16px;
     flex-wrap: wrap;
 }
+.btn-outline-light {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,.35);
+}
+.btn-outline-light:hover {
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.6);
+}
 
 /* Right panel — image or video */
 .hero-panel-right {
