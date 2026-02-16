@@ -276,16 +276,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- Subtle Hero Parallax ----
-    const heroImages = document.querySelectorAll('.hero-image, .hero-video');
-    if (heroImages.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const heroVisuals = document.querySelectorAll('.hero-panel-img, .hero-panel-right .hero-video');
+    if (heroVisuals.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         let ticking = false;
         window.addEventListener('scroll', () => {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const y = window.scrollY;
                     if (y < window.innerHeight) {
-                        heroImages.forEach(el => {
-                            el.style.transform = 'translateY(' + (y * 0.25) + 'px) scale(1.05)';
+                        heroVisuals.forEach(el => {
+                            el.style.transform = 'translateY(' + (y * 0.15) + 'px) scale(1.05)';
                         });
                     }
                     ticking = false;
