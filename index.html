@@ -118,40 +118,36 @@
     </header>
 
     <!-- ================================================================
-         PERSONAL HERO
+         PERSONAL HERO — Split-Screen
          ================================================================ -->
-    <section class="hero tab-personal" id="hero">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
-            <div class="hero-image hero-image-personal"></div>
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text" data-animate="fade-up">
-                <h1>Independent Mortgage &amp;<br>Commercial Finance<br>Brokers <span class="text-accent">in the UK</span></h1>
-                <p class="hero-subtitle">Providing expert financial solutions | Over 100 years combined banking experience | Nationwide coverage | All Residential and Commercial needs</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Free Consultation <i class="fas fa-arrow-right"></i></a>
+    <section class="hero hero-split tab-personal" id="hero">
+        <div class="hero-panel-left">
+            <div class="hero-grain"></div>
+            <div class="hero-diagonal-accent"></div>
+            <div class="hero-text-wrap">
+                <div class="hero-gold-line hero-anim" style="--delay:0ms"></div>
+                <div class="hero-label hero-anim" style="--delay:100ms">Independent Brokers</div>
+                <h1>
+                    <span class="hero-line hero-anim" style="--delay:200ms">Independent Mortgage &amp;</span>
+                    <span class="hero-line hero-anim" style="--delay:350ms">Commercial Finance</span>
+                    <span class="hero-line hero-anim" style="--delay:500ms">Brokers <em class="text-gold-italic">in the UK</em></span>
+                </h1>
+                <p class="hero-subtitle hero-anim" style="--delay:650ms">Providing expert financial solutions <span class="gold-dot">&middot;</span> Over 100 years combined experience <span class="gold-dot">&middot;</span> Nationwide coverage</p>
+                <div class="hero-btns hero-anim" style="--delay:800ms">
+                    <a href="#contact" class="btn btn-secondary">Free Consultation <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
+        <div class="hero-panel-right">
+            <div class="hero-panel-img hero-img-personal"></div>
+        </div>
         <div class="hero-logos">
             <div class="container hero-logos-inner">
-                <div class="logo-badge" data-animate="fade-up" data-delay="100">
-                    <div class="badge-icon"><i class="fas fa-award"></i></div>
-                    <span>NACFB Member</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="200">
-                    <div class="badge-icon"><i class="fas fa-trophy"></i></div>
-                    <span>BTL Broker of the Year 2024</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="300">
-                    <div class="badge-icon"><i class="fas fa-star"></i></div>
-                    <span>Best Brokerage Firm 2024</span>
-                </div>
-                <div class="logo-badge" data-animate="fade-up" data-delay="400">
-                    <div class="badge-icon"><i class="fas fa-shield-halved"></i></div>
-                    <span>FCA Authorised</span>
-                </div>
+                <img class="hero-logo-img hero-anim" style="--delay:900ms" src="images/logos/nacfb.svg" alt="NACFB Member" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:1000ms" src="images/logos/fca.svg" alt="FCA Authorised" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:1100ms" src="images/logos/commercial-broker-awards.svg" alt="BTL Broker of the Year 2024" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:1200ms" src="images/logos/sme-news-awards.svg" alt="Most Innovative 2023" loading="eager">
+                <img class="hero-logo-img hero-anim" style="--delay:1300ms" src="images/logos/signature-awards.svg" alt="Excellence in Financial Services 2023" loading="eager">
             </div>
         </div>
     </section>
