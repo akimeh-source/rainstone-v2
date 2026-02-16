@@ -254,7 +254,7 @@ body[data-mode="commercial"] .nav-personal-item{display:none}
     object-fit:cover;z-index:0;
 }
 .hero-overlay-commercial{
-    background:linear-gradient(135deg,rgba(21,46,34,.92) 0%,rgba(27,60,45,.7) 50%,rgba(27,60,45,.5) 100%);
+    background:linear-gradient(135deg,rgba(21,46,34,.55) 0%,rgba(27,60,45,.4) 50%,rgba(27,60,45,.3) 100%);
     z-index:1;
 }
 
@@ -266,9 +266,8 @@ body[data-mode="commercial"] .nav-personal-item{display:none}
 /* Hero logos strip */
 .hero-logos{
     position:relative;z-index:2;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    border-top:1px solid rgba(255,255,255,.1);
+    background:#1B3C2D;
+    border-top:1px solid rgba(255,255,255,.08);
     padding:20px 0;
 }
 .hero-logos-inner{
@@ -281,7 +280,7 @@ body[data-mode="commercial"] .nav-personal-item{display:none}
 }
 .badge-icon{
     width:36px;height:36px;display:flex;align-items:center;justify-content:center;
-    border-radius:8px;background:rgba(201,168,76,.15);color:#C9A84C;font-size:.9rem;
+    border-radius:50%;background:rgba(201,168,76,.15);color:#C9A84C;font-size:.9rem;
 }
 
 /* ---------- SOLUTIONS SECTIONS ---------- */
@@ -345,7 +344,7 @@ body[data-mode="commercial"] .nav-personal-item{display:none}
 .solutions-alt .value-card{background:#FAFAF7}
 .value-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
 .value-icon{
-    width:56px;height:56px;border-radius:14px;
+    width:56px;height:56px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     margin:0 auto 16px;font-size:1.3rem;
     background:linear-gradient(135deg,#1B3C2D,#2A5A3F);color:#C9A84C;
@@ -370,10 +369,10 @@ body[data-mode="commercial"] .nav-personal-item{display:none}
 .solutions-alt .service-card{background:#FAFAF7}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
 .service-icon{
-    width:48px;height:48px;border-radius:12px;
+    width:56px;height:56px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
-    margin-bottom:16px;font-size:1.1rem;
-    background:linear-gradient(135deg,#1B3C2D,#2A5A3F);color:#C9A84C;
+    margin-bottom:16px;font-size:1.2rem;
+    background:linear-gradient(135deg,#F5F0E0,#E8DFC8);color:#1B3C2D;
 }
 .service-card h4{
     font-family:'Playfair Display',serif;font-size:1.15rem;
@@ -518,7 +517,7 @@ body[data-mode="commercial"] .nav-personal-item{display:none}
     background:rgba(201,168,76,.12);padding:4px 10px;border-radius:20px;
 }
 .award-icon{
-    width:52px;height:52px;border-radius:14px;
+    width:52px;height:52px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     margin:0 auto 16px;font-size:1.2rem;
     background:linear-gradient(135deg,#1B3C2D,#2A5A3F);color:#C9A84C;

@@ -10,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Preload commercial video -->
-    <link rel="preload" href="videos/commercial-hero.mp4" as="video" type="video/mp4">
 </head>
 <body data-mode="personal">
 
@@ -58,14 +56,14 @@
                 <ul class="nav-list">
                     <!-- Personal nav — Mortgages -->
                     <li class="nav-item has-dropdown nav-personal">
-                        <a href="#services">Mortgages <i class="fas fa-chevron-down"></i></a>
+                        <a href="#personal-finance">Mortgages <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="#services">Flexible Mortgages</a></li>
-                            <li><a href="#services">Buy-to-Let Mortgages</a></li>
-                            <li><a href="#services">Remortgaging</a></li>
-                            <li><a href="#services">Lifetime Mortgages</a></li>
-                            <li><a href="#services">Offset Mortgages</a></li>
-                            <li><a href="#services">Development Finance</a></li>
+                            <li><a href="#personal-finance">Flexible Mortgages</a></li>
+                            <li><a href="#personal-finance">Buy-to-Let Mortgages</a></li>
+                            <li><a href="#personal-finance">Remortgaging</a></li>
+                            <li><a href="#personal-finance">Lifetime Mortgages</a></li>
+                            <li><a href="#personal-finance">Offset Mortgages</a></li>
+                            <li><a href="#personal-finance">Development Finance</a></li>
                         </ul>
                     </li>
                     <!-- Commercial nav — Our Services -->
@@ -91,7 +89,7 @@
                             <li><a href="#">Financial Planning</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item nav-personal"><a href="#">Foreign Nationals</a></li>
+                    <li class="nav-item nav-personal"><a href="#personal-finance">Foreign Nationals</a></li>
                     <li class="nav-item"><a href="#">Network</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-cta">Book Consultation</a></li>
                     <li class="nav-item has-dropdown">
@@ -125,11 +123,10 @@
         </div>
         <div class="container hero-content">
             <div class="hero-text" data-animate="fade-up">
-                <h1>Residential &amp; Commercial<br>Finance <span class="text-accent">Made Easy</span></h1>
-                <p class="hero-subtitle">Always Getting You The Best Rate. Founded in 2015 by ex-professional bankers with over 100 years of combined experience.</p>
+                <h1>Independent Mortgage &amp;<br>Commercial Finance<br>Brokers <span class="text-accent">in the UK</span></h1>
+                <p class="hero-subtitle">Providing expert financial solutions | Over 100 years combined banking experience | Nationwide coverage | All Residential and Commercial needs</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-primary">Free Consultation <i class="fas fa-arrow-right"></i></a>
-                    <a href="#" class="btn btn-outline-light">Join as an Introducer <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -161,7 +158,7 @@
     <section class="hero hero-commercial-bg tab-commercial" id="hero-commercial">
         <div class="hero-bg">
             <div class="hero-overlay hero-overlay-commercial"></div>
-            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto">
                 <source src="videos/commercial-hero.mp4" type="video/mp4">
             </video>
         </div>
@@ -672,6 +669,9 @@
                     </div>
                 </div>
             </div>
+            <div class="section-cta" data-animate="fade-up">
+                <a href="#" class="btn btn-secondary">Read Insights <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </section>
 
@@ -682,7 +682,7 @@
         <div class="container">
             <div class="section-label" data-animate="fade-up">COMMON QUESTIONS</div>
             <h2 class="section-title" data-animate="fade-up">Financial Planning <span class="text-accent">FAQ's</span></h2>
-            <p class="section-subtitle" data-animate="fade-up">Common questions for commercial finance</p>
+            <p class="section-subtitle" data-animate="fade-up">Common questions about our finance services</p>
             <div class="faq-list" data-animate="fade-up">
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
@@ -823,12 +823,12 @@
                     <div class="footer-col">
                         <h5>Personal</h5>
                         <ul>
-                            <li><a href="#">Residential Mortgages</a></li>
-                            <li><a href="#">Buy-to-Let Mortgages</a></li>
-                            <li><a href="#">Remortgaging</a></li>
-                            <li><a href="#">Lifetime Mortgages</a></li>
-                            <li><a href="#">First-Time Buyers</a></li>
-                            <li><a href="#">Foreign Nationals</a></li>
+                            <li><a href="#personal-finance">Residential Mortgages</a></li>
+                            <li><a href="#personal-finance">Buy-to-Let Mortgages</a></li>
+                            <li><a href="#personal-finance">Remortgaging</a></li>
+                            <li><a href="#personal-finance">Lifetime Mortgages</a></li>
+                            <li><a href="#personal-finance">First-Time Buyers</a></li>
+                            <li><a href="#personal-finance">Foreign Nationals</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -860,7 +860,7 @@
                 <p class="footer-disclaimer tab-personal">Your home may be repossessed if you do not keep up repayments on a mortgage or other debt secured on it.</p>
                 <p class="footer-regulatory">Rainstone Money is a trading name of Rainstone Financial Services Limited which is authorised and regulated by the Financial Conduct Authority, Registration Number: 743879. Rainstone Financial Services Limited is registered in England and Wales, Company Registration Number: 09650440. Registered Office: The Whitechapel Centre, 85 Myrdle Street, London E1 1HL. We are a credit broker, not a lender. We may receive commissions that will vary depending on the lender, product, or other permissible factors. The nature of any commission model will be confirmed to you before you proceed.</p>
                 <div class="footer-copy">
-                    <p>&copy; 2024 | All Rights Reserved | Rainstone Financial Services Ltd</p>
+                    <p>&copy; 2025 | All Rights Reserved | Rainstone Financial Services Ltd</p>
                 </div>
             </div>
         </div>

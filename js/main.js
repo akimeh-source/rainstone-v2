@@ -25,7 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const video = document.querySelector('.hero-video');
             if (video) {
                 if (mode === 'commercial') {
-                    video.play().catch(() => {});
+                    // Small delay lets the browser paint the now-visible element
+                    requestAnimationFrame(() => {
+                        video.currentTime = 0;
+                        video.play().catch(() => {});
+                    });
                 } else {
                     video.pause();
                 }
