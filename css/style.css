@@ -585,7 +585,7 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
     flex-wrap: wrap;
 }
 .hero-logo-img {
-    max-height: 42px;
+    max-height: 70px;
     width: auto;
     opacity: .8;
     filter: brightness(0) invert(1);
