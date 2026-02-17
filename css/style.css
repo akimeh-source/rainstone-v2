@@ -1863,7 +1863,9 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
 }
 
 /* ============================================================
-   INNER PAGES — Shared styles for all service/info pages
+   INNER PAGES — Alternative layout styles (not currently used)
+   These styles support a compact hero + sidebar layout for future pages.
+   All inner pages currently use the hero-split + solutions-section layout.
    ============================================================ */
 
 /* Page Hero — compact dark banner */
