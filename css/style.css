@@ -1551,7 +1551,7 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 32px;
     position: relative;
     z-index: 1;

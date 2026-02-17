@@ -6,10 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Mode Tab Switching (Personal / Commercial) ----
     const modeTabs = document.querySelectorAll('.mode-tab');
     const logoTagline = document.getElementById('logo-tagline');
+    const isHomePage = /\/(index\.html)?$/.test(window.location.pathname);
+
+    // Restore saved mode from localStorage (default to page's data-mode)
+    const savedMode = localStorage.getItem('rs-mode');
+    const activeMode = savedMode || document.body.getAttribute('data-mode') || 'personal';
+    document.body.setAttribute('data-mode', activeMode);
+    localStorage.setItem('rs-mode', activeMode);
+
+    // Sync mode tab active state on page load
+    modeTabs.forEach(t => t.classList.toggle('active', t.dataset.tab === activeMode));
+
+    // Sync logo tagline on page load
+    if (logoTagline) {
+        logoTagline.textContent = activeMode === 'commercial' ? 'COMMERCIAL' : 'MONEY';
+    }
 
     modeTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const mode = tab.dataset.tab;
+
+            // Persist mode choice
+            localStorage.setItem('rs-mode', mode);
+
+            // On inner pages, redirect to homepage in the new mode
+            if (!isHomePage) {
+                window.location.href = '/index.html';
+                return;
+            }
+
             document.body.setAttribute('data-mode', mode);
 
             // Update active tab
