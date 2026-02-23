@@ -752,8 +752,8 @@ input, textarea, select { font-family: inherit; font-size: inherit }
     justify-content: center;
     margin: 0 auto 16px;
     font-size: 1.2rem;
-    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
-    color: var(--gold);
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--green-dark);
     transition: transform .3s var(--ease-spring);
 }
 .value-card:hover .value-icon { transform: scale(1.1) }
@@ -1384,8 +1384,13 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
 .insight-body p { font-size: .88rem; color: var(--text-body); margin-bottom: 16px; line-height: 1.7 }
 
 /* ---------- FAQ ---------- */
-.faq-section { padding: 100px 0; background: var(--white); text-align: center }
-.faq-list { max-width: 800px; margin: 0 auto; text-align: left }
+.faq-section { padding: 100px 0; background: var(--white) }
+.faq-section .container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start }
+.faq-section .faq-header { text-align: left }
+.faq-section .section-label { justify-content: flex-start }
+.faq-section .section-title { text-align: left }
+.faq-section .section-subtitle { text-align: left; margin: 0 }
+.faq-list { text-align: left }
 .faq-item {
     border-bottom: 1px solid rgba(27,60,45,.06);
 }
@@ -1805,6 +1810,10 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
     }
     .service-cards { grid-template-columns: repeat(2, 1fr) }
     .process-steps { grid-template-columns: repeat(3, 1fr) }
+    .faq-section .container { grid-template-columns: 1fr; gap: 32px }
+    .faq-section .faq-header { text-align: center }
+    .faq-section .section-label { justify-content: center }
+    .faq-section .section-title { text-align: center }
 }
 
 @media (max-width: 768px) {
