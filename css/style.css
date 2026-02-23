@@ -472,20 +472,8 @@ input, textarea, select { font-family: inherit; font-size: inherit }
     mix-blend-mode: overlay;
 }
 
-/* Gold diagonal accent line tracing the clip edge */
-.hero-diagonal-accent {
-    position: absolute;
-    top: 0;
-    right: -1px;
-    width: 2px;
-    height: 141%;
-    background: var(--gold);
-    opacity: .2;
-    transform: rotate(8deg);
-    transform-origin: top right;
-    pointer-events: none;
-    z-index: 3;
-}
+/* Diagonal accent — disabled in V2 */
+.hero-diagonal-accent { display: none }
 
 /* Text wrapper */
 .hero-text-wrap {
@@ -527,11 +515,11 @@ input, textarea, select { font-family: inherit; font-size: inherit }
 .hero-split h1 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
-    line-height: 1.1;
+    font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+    line-height: 1.15;
     color: #fff;
     margin-bottom: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 .hero-line {
     display: block;
@@ -563,6 +551,7 @@ input, textarea, select { font-family: inherit; font-size: inherit }
 .btn-outline-light {
     background: transparent;
     color: #fff;
+    padding: 14px 32px;
     border: 1.5px solid rgba(255,255,255,.35);
 }
 .btn-outline-light:hover {
@@ -574,7 +563,6 @@ input, textarea, select { font-family: inherit; font-size: inherit }
 .hero-panel-right {
     position: relative;
     overflow: hidden;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 .hero-panel-img {
     position: absolute;
@@ -1788,7 +1776,9 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 2px dotted rgba(201,168,76,.3);
     color: var(--white);
     position: relative;
     z-index: 1;
@@ -1846,6 +1836,8 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
+    padding-bottom: 32px;
+    border-bottom: 2px dotted rgba(11,29,58,.15);
 }
 .testimonial-right blockquote {
     border-left: 4px solid var(--gold);
