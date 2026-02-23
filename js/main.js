@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const btn = form.querySelector('button[type="submit"]');
                 const originalText = btn.innerHTML;
                 btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                btn.style.background = '#2A5A3F';
+                btn.style.background = '#0B1D3A';
                 btn.disabled = true;
 
                 setTimeout(() => {
