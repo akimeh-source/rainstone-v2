@@ -1,13 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-  <!-- Laurel wreath left -->
-  <path d="M40 60 Q30 45 38 30 Q32 38 28 50 Q24 40 30 25 Q25 35 22 48 Q20 35 28 18" fill="none" stroke="#222" stroke-width="1.2"/>
-  <!-- Laurel wreath right -->
-  <path d="M160 60 Q170 45 162 30 Q168 38 172 50 Q176 40 170 25 Q175 35 178 48 Q180 35 172 18" fill="none" stroke="#222" stroke-width="1.2"/>
-  <!-- Award text -->
-  <text x="100" y="28" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="2">SME NEWS</text>
-  <text x="100" y="42" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="2">AWARDS</text>
-  <!-- Divider -->
-  <line x1="60" y1="50" x2="140" y2="50" stroke="#222" stroke-width="0.75"/>
-  <!-- Category -->
-  <text x="100" y="62" font-family="Arial, Helvetica, sans-serif" font-size="5.5" font-weight="400" fill="#222" text-anchor="middle" letter-spacing="0.5">Most Innovative 2023</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+  <!-- Circular badge outline -->
+  <circle cx="120" cy="42" r="36" fill="none" stroke="#222" stroke-width="2"/>
+  <circle cx="120" cy="42" r="32" fill="none" stroke="#222" stroke-width="0.8"/>
+  <!-- Laurel left -->
+  <path d="M88 62 Q82 50 86 38 Q80 46 78 55" fill="none" stroke="#222" stroke-width="1.2"/>
+  <path d="M84 55 Q80 44 84 32 Q78 42 77 50" fill="none" stroke="#222" stroke-width="1"/>
+  <path d="M82 48 Q80 38 86 26 Q78 36 78 44" fill="none" stroke="#222" stroke-width="0.8"/>
+  <!-- Laurel right -->
+  <path d="M152 62 Q158 50 154 38 Q160 46 162 55" fill="none" stroke="#222" stroke-width="1.2"/>
+  <path d="M156 55 Q160 44 156 32 Q162 42 163 50" fill="none" stroke="#222" stroke-width="1"/>
+  <path d="M158 48 Q160 38 154 26 Q162 36 162 44" fill="none" stroke="#222" stroke-width="0.8"/>
+  <!-- SME text -->
+  <text x="120" y="36" font-family="'Georgia', 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="3">SME</text>
+  <!-- Divider inside circle -->
+  <line x1="98" y1="42" x2="142" y2="42" stroke="#222" stroke-width="0.8"/>
+  <!-- News text -->
+  <text x="120" y="54" font-family="'Arial', 'Helvetica', sans-serif" font-size="7" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="2">NEWS</text>
+  <!-- Category below circle -->
+  <text x="120" y="90" font-family="'Arial', 'Helvetica', sans-serif" font-size="6" font-weight="600" fill="#222" text-anchor="middle" letter-spacing="1.5">MOST INNOVATIVE 2023</text>
 </svg>

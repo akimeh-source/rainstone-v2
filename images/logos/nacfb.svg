@@ -1,10 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-  <!-- Shield outline only -->
-  <path d="M30 6 L170 6 Q178 6 178 14 L178 48 Q178 58 168 64 L105 74 Q100 75 95 74 L32 64 Q22 58 22 48 L22 14 Q22 6 30 6 Z" fill="none" stroke="#222" stroke-width="2"/>
-  <!-- NACFB text -->
-  <text x="100" y="34" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="3">NACFB</text>
-  <!-- Divider line -->
-  <line x1="55" y1="42" x2="145" y2="42" stroke="#222" stroke-width="1"/>
-  <!-- Subtitle -->
-  <text x="100" y="56" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="600" fill="#222" text-anchor="middle" letter-spacing="2">MEMBER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 90" width="240" height="90">
+  <!-- Shield shape -->
+  <path d="M60 4 L180 4 Q190 4 190 14 L190 52 Q190 68 172 76 L124 88 Q120 89.5 116 88 L68 76 Q50 68 50 52 L50 14 Q50 4 60 4 Z" fill="none" stroke="#222" stroke-width="2.5"/>
+  <!-- Horizontal bars inside shield -->
+  <line x1="65" y1="20" x2="175" y2="20" stroke="#222" stroke-width="1.2"/>
+  <line x1="65" y1="50" x2="175" y2="50" stroke="#222" stroke-width="1.2"/>
+  <!-- NACFB large text -->
+  <text x="120" y="42" font-family="'Georgia', 'Times New Roman', serif" font-size="22" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="4">NACFB</text>
+  <!-- Top subtitle -->
+  <text x="120" y="16" font-family="'Georgia', 'Times New Roman', serif" font-size="5.5" font-weight="400" fill="#222" text-anchor="middle" letter-spacing="2.5">NATIONAL ASSOCIATION OF</text>
+  <!-- Bottom subtitle -->
+  <text x="120" y="62" font-family="'Georgia', 'Times New Roman', serif" font-size="5.5" font-weight="400" fill="#222" text-anchor="middle" letter-spacing="2">COMMERCIAL FINANCE BROKERS</text>
+  <!-- Member badge -->
+  <text x="120" y="78" font-family="'Georgia', 'Times New Roman', serif" font-size="7" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="3">MEMBER</text>
 </svg>

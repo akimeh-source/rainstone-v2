@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-  <!-- Diamond icon -->
-  <polygon points="100,6 120,26 100,46 80,26" fill="none" stroke="#222" stroke-width="1.5"/>
-  <!-- Award name -->
-  <text x="100" y="58" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="2">THE SIGNATURE AWARDS</text>
-  <!-- Category -->
-  <text x="100" y="70" font-family="Arial, Helvetica, sans-serif" font-size="5.5" font-weight="400" fill="#222" text-anchor="middle" letter-spacing="0.5">Excellence in Financial Services 2023</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+  <!-- Hexagonal badge outline -->
+  <polygon points="120,4 158,22 158,58 120,76 82,58 82,22" fill="none" stroke="#222" stroke-width="2"/>
+  <polygon points="120,10 152,25 152,55 120,70 88,55 88,25" fill="none" stroke="#222" stroke-width="0.8"/>
+  <!-- Star at top -->
+  <polygon points="120,18 123,25 130,25 124,29 126,36 120,32 114,36 116,29 110,25 117,25" fill="#222" opacity="0.2" stroke="#222" stroke-width="0.6"/>
+  <!-- SIGNATURE text -->
+  <text x="120" y="48" font-family="'Georgia', 'Times New Roman', serif" font-size="8" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="2.5">SIGNATURE</text>
+  <!-- AWARDS text -->
+  <text x="120" y="60" font-family="'Georgia', 'Times New Roman', serif" font-size="7" font-weight="700" fill="#222" text-anchor="middle" letter-spacing="2">AWARDS</text>
+  <!-- Category below -->
+  <text x="120" y="92" font-family="'Arial', 'Helvetica', sans-serif" font-size="5.5" font-weight="400" fill="#222" text-anchor="middle" letter-spacing="1">Excellence in Financial Services 2023</text>
 </svg>
