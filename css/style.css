@@ -238,24 +238,7 @@ input, textarea, select { font-family: inherit; font-size: inherit }
     border-radius: 1px;
 }
 
-/* Tab visibility — driven by body[data-mode] */
-.tab-personal { display: block }
-.tab-commercial { display: none }
-body[data-mode="commercial"] .tab-personal { display: none }
-body[data-mode="commercial"] .tab-commercial { display: block }
-
-/* Hero sections need grid, not block — higher specificity overrides */
-.hero-split.tab-personal { display: grid }
-.hero-split.tab-commercial { display: none }
-body[data-mode="commercial"] .hero-split.tab-personal { display: none }
-body[data-mode="commercial"] .hero-split.tab-commercial { display: grid }
-
-/* Nav items that swap per mode */
-.nav-personal { display: flex }
-.nav-commercial { display: none !important }
-body[data-mode="commercial"] .nav-personal { display: none !important }
-body[data-mode="commercial"] .nav-commercial { display: flex !important }
-body[data-mode="commercial"] .nav-personal-item { display: none }
+/* All sections visible in V2 — no tab-based hiding */
 
 /* ---------- HEADER ---------- */
 .site-header {

@@ -1,77 +1,8 @@
 /* ============================================================
-   RAINSTONE COMMERCIAL — Main JavaScript
+   RAINSTONE MONEY V2 — Main JavaScript
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ---- Mode Tab Switching (Personal / Commercial) ----
-    const modeTabs = document.querySelectorAll('.mode-tab');
-    const logoTagline = document.getElementById('logo-tagline');
-    const isHomePage = /\/(index\.html)?$/.test(window.location.pathname);
-
-    // Restore saved mode from localStorage (default to page's data-mode)
-    const savedMode = localStorage.getItem('rs-mode');
-    const activeMode = savedMode || document.body.getAttribute('data-mode') || 'personal';
-    document.body.setAttribute('data-mode', activeMode);
-    localStorage.setItem('rs-mode', activeMode);
-
-    // Sync mode tab active state on page load
-    modeTabs.forEach(t => t.classList.toggle('active', t.dataset.tab === activeMode));
-
-    // Sync logo tagline on page load
-    if (logoTagline) {
-        logoTagline.textContent = activeMode === 'commercial' ? 'COMMERCIAL' : 'MONEY';
-    }
-
-    modeTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const mode = tab.dataset.tab;
-
-            // Persist mode choice
-            localStorage.setItem('rs-mode', mode);
-
-            // On inner pages, redirect to homepage in the new mode
-            if (!isHomePage) {
-                window.location.href = '/index.html';
-                return;
-            }
-
-            document.body.setAttribute('data-mode', mode);
-
-            // Update active tab
-            modeTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-
-            // Update logo tagline
-            if (logoTagline) {
-                logoTagline.textContent = mode === 'commercial' ? 'COMMERCIAL' : 'MONEY';
-            }
-
-            // Handle commercial video play/pause
-            const video = document.querySelector('.hero-video');
-            if (video) {
-                if (mode === 'commercial') {
-                    // Small delay lets the browser paint the now-visible element
-                    requestAnimationFrame(() => {
-                        video.currentTime = 0;
-                        video.play().catch(() => {});
-                    });
-                } else {
-                    video.pause();
-                }
-            }
-
-            // Re-trigger animations on newly visible sections
-            document.querySelectorAll('.tab-' + mode + ' [data-animate]').forEach(el => {
-                if (!el.classList.contains('animated')) {
-                    el.classList.add('animated');
-                }
-            });
-
-            // Scroll to top of page on switch
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    });
-
     // ---- Phone Dropdown ----
     const phoneBtn = document.querySelector('.header-phone');
     const phoneDrop = document.querySelector('.phone-dropdown');
@@ -144,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 10);
 
-        // Update scroll progress bar
         if (scrollProgress) {
             const docH = document.documentElement.scrollHeight - window.innerHeight;
             const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
@@ -213,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         animatedEls.forEach(el => observer.observe(el));
     } else {
-        // Fallback: show everything
         animatedEls.forEach(el => el.classList.add('animated'));
     }
 
@@ -227,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = form.querySelector('#email');
             let valid = true;
 
-            // Simple validation
             [name, email].forEach(field => {
                 field.style.borderColor = '';
                 if (!field.value.trim()) {
@@ -258,68 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Mortgage Calculator ----
-    const calcBtn = document.getElementById('calc-btn');
-    const calcTermSlider = document.getElementById('calc-term');
-    const calcTermVal = document.getElementById('calc-term-val');
-    const calcDebt = document.getElementById('calc-debt');
-
-    if (calcTermSlider && calcTermVal) {
-        calcTermSlider.addEventListener('input', () => {
-            calcTermVal.textContent = calcTermSlider.value;
-        });
-    }
-
-    // Live comma formatting on debt input
-    if (calcDebt) {
-        calcDebt.addEventListener('input', () => {
-            const raw = calcDebt.value.replace(/[^0-9]/g, '');
-            if (raw) {
-                calcDebt.value = parseInt(raw, 10).toLocaleString('en-GB');
-            }
-        });
-    }
-
-    if (calcBtn) {
-        calcBtn.addEventListener('click', () => {
-            const debtRaw = document.getElementById('calc-debt').value.replace(/[^0-9.]/g, '');
-            const termYears = parseInt(calcTermSlider.value, 10);
-            const rateRaw = document.getElementById('calc-rate').value.replace(/[^0-9.]/g, '');
-
-            const debt = parseFloat(debtRaw);
-            const rate = parseFloat(rateRaw);
-
-            if (isNaN(debt) || isNaN(rate) || isNaN(termYears) || debt <= 0 || rate <= 0 || termYears <= 0) {
-                alert('Please enter valid positive numbers for all fields.');
-                return;
-            }
-
-            const monthlyRate = (rate / 100) / 12;
-            const totalMonths = termYears * 12;
-
-            // Interest Only
-            const ioMonthly = (debt * (rate / 100)) / 12;
-            const ioTotal = ioMonthly * totalMonths;
-
-            // Repayment (annuity formula)
-            const rpMonthly = debt * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
-                (Math.pow(1 + monthlyRate, totalMonths) - 1);
-            const rpTotal = rpMonthly * totalMonths;
-
-            // Format as GBP
-            const fmt = (n) => '£' + n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-            document.getElementById('res-io-monthly').textContent = fmt(ioMonthly);
-            document.getElementById('res-io-total').textContent = fmt(ioTotal);
-            document.getElementById('res-rp-monthly').textContent = fmt(rpMonthly);
-            document.getElementById('res-rp-total').textContent = fmt(rpTotal);
-
-            document.getElementById('calc-results').classList.add('visible');
-        });
-    }
-
     // ---- Subtle Hero Parallax ----
-    const heroVisuals = document.querySelectorAll('.hero-panel-img, .hero-panel-right .hero-video');
+    const heroVisuals = document.querySelectorAll('.hero-panel-img');
     if (heroVisuals.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         let ticking = false;
         window.addEventListener('scroll', () => {
@@ -369,4 +237,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         statNumbers.forEach(el => statObserver.observe(el));
     }
+
+    // ---- Mode Tabs (scroll to relevant section) ----
+    const modeTabs = document.querySelectorAll('.mode-tab');
+    modeTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            modeTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const mode = tab.dataset.tab;
+            const targetId = mode === 'commercial' ? 'services' : 'personal-finance';
+            const target = document.getElementById(targetId);
+            if (target) {
+                const headerH = header.offsetHeight;
+                const top = target.getBoundingClientRect().top + window.scrollY - headerH - 20;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
 });
