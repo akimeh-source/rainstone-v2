@@ -428,6 +428,7 @@ body[data-mode="commercial"] .nav-personal-item { display: none }
     border-radius: 32px;
     text-decoration: none;
     letter-spacing: .5px;
+    white-space: nowrap;
     transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
     box-shadow: 0 3px 12px rgba(212,89,79,.3);
 }
