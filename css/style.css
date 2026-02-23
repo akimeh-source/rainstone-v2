@@ -614,20 +614,16 @@ input, textarea, select { font-family: inherit; font-size: inherit }
 
 /* ---------- HERO LOGO STRIP ---------- */
 .hero-logos {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 10;
     background: var(--navy-deep);
-    border-top: 1px solid rgba(201,168,76,.12);
-    padding: 18px 0;
+    padding: 32px 0;
 }
 .hero-logos-inner {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 48px;
+    gap: 56px;
     flex-wrap: wrap;
 }
 .hero-logo-img {
@@ -2055,7 +2051,6 @@ blockquote footer span { font-family: var(--font-body); font-size: .78rem; color
         -webkit-overflow-scrolling: touch;
     }
     .hero-logo-img { flex-shrink: 0 }
-    .hero-logos { position: relative }
     .hero-diagonal-accent { display: none }
 
     .values-row, .awards-grid, .testimonials-grid, .insights-grid,
